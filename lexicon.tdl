@@ -1,0 +1,194 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+狗 := common-noun-lex &
+  [ STEM < "狗" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+猫 := common-noun-lex &
+  [ STEM < "猫" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+    
+东西 := common-noun-lex &
+  [ STEM < "东西" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+他 := common-noun-lex &
+  [ STEM < "他" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_he_n_rel" ].
+
+她 := common-noun-lex &
+  [ STEM < "她" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
+
+我 := common-noun-lex &
+  [ STEM < "我" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+
+人 := common-noun-lex &
+  [ STEM < "人" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+小明 := proper-noun-lex &
+  [ STEM < "小明" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Xiaoming_n_rel" ].
+
+那里 := pronoun-noun-lex &
+  [ STEM < "那里" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_there_n_rel" ].
+
+;;; Adjectives
+
+可爱 := rel_adjective-adj-lex &
+  [ STEM < "可爱" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cute_a_rel" ].
+
+高兴 := rel_adjective-adj-lex &
+  [ STEM < "高兴" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_happy_a_rel" ].
+
+白 := common_adjective-adj-lex &
+  [ STEM < "白" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
+
+;;; Verbs
+
+有 := common_transitive-verb-lex &
+  [ STEM < "有" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_have_v_rel" ].
+
+要_verb := common_transitive-verb-lex &
+  [ STEM < "要" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+会_verb := common_transitive-verb-lex &
+  [ STEM < "会" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+唱歌 := common_intransitive-verb-lex &
+  [ STEM < "唱歌" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sing_v_rel" ].
+
+知道 := common_intransitive-verb-lex &
+  [ STEM < "知道" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+追 := transitive_no_obj_drop-verb-lex &
+  [ STEM < "追" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+给 := transitive_no_obj_drop-verb-lex &
+  [ STEM < "给" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+觉得 := decl_comp-verb-lex &
+  [ STEM < "觉得" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+问 := intr_comp-verb-lex &
+  [ STEM < "问" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+
+;;; Auxiliaries
+
+要_aux := yao-aux-lex &
+  [ STEM < "要" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+会_aux := common-aux-lex &
+  [ STEM < "会" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+大概 := common-aux-lex &
+  [ STEM < "大概" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_roughly_v_rel" ].
+
+不 := neg-aux-lex &
+  [ STEM < "不" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+没 := neg-aux-lex &
+  [ STEM < "没" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_not_v_rel" ].
+
+在 := inperfective-aux-lex &
+  [ STEM < "在" > ].
+
+了 := perfective-aux-lex &
+  [ STEM < "了" > ].
+
+应该 := double_aux-aux-lex &
+  [ STEM < "应该" > ].
+
+过 := experiential-aux-lex &
+  [ STEM < "过" > ].
+
+;;; 地 := manner_adverb-aux-lex &
+;;;  [ STEM < "地" > ].
+
+的 := relative_marker-aux-lex &
+  [ STEM < "的" > ].
+  
+地_adp := adj-to-adv-lex &
+  [ STEM < "地" > ].
+
+;;; Copulas
+
+很 := adjective_pred-cop-lex &
+  [ STEM < "很" > ].
+
+;;; Determiners
+
+那只_q := common-determiner-lex &
+  [ STEM < "那只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+
+那只_n := n+det-lex &
+  [ STEM < "那只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_that_q_rel" ].
+
+一只_q := common-determiner-lex &
+  [ STEM < "一只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
+
+一只_n := n+det-lex &
+  [ STEM < "一只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_a_q_rel" ].
+
+这只_q := common-determiner-lex &
+  [ STEM < "这只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+    
+这只_n := n+det-lex &
+  [ STEM < "这只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_this_q_rel" ].
+
+那个_q := common-determiner-lex &
+  [ STEM < "那个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+    
+那个_n := n+det-lex &
+  [ STEM < "那个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_that_q_rel" ].
+
+吗 := qpart-lex-item &
+  [ STEM < "吗" > ].
+
+和1 := conj-lex &
+  [ STEM < "和" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
+
+和2 := conj-lex &
+  [ STEM < "和" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "2" ].
+
+;;; Complementizers
+
+是否 := comps2-complementizer-lex-item &
+  [ STEM < "是否" > ].

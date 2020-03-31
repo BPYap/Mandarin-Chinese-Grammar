@@ -1,0 +1,30 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+在_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT imperfective ] !>,
+    FLAGS.TRIGGER "在" ].
+
+了_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT perfective ] !>,
+    FLAGS.TRIGGER "了" ].
+
+应该_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "应该" ].
+
+过_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "过" ].
+
+地_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "地" ].
+
+的_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "的" ].
+
+吗_gr := generator_rule &
+  [ CONTEXT.RELS <! [ ARG0.SF ques ] !>,
+    FLAGS.TRIGGER "吗" ].

@@ -1,0 +1,15 @@
+# Temporary files from Emacs, vim, etc.
+*~
+\#*\#
+*.elc
+auto-save-list
+.\#*
+
+# Compiled Grammar images
+*.dat
+*.grm
+
+# TSDB profiles
+tsdb/home/
+tsdb/current/
+trees/

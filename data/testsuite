@@ -1,0 +1,765 @@
+Language: Mandarin Chinese
+Language code: cmn
+Lines: orth orth-seg gloss translat
+Author: Yap Boon Peng
+Date: February 17, 2020
+
+#1
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+那只 狗 追 一只 猫
+那-只 狗 追 一-只 猫
+the-CLF dog chase a-CLF cat
+'The dog chases a cat'
+
+#2
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+一只 猫 追 一只 狗
+一-只 猫 追 一-只 狗
+a-CLF cat chase a-CLF dog
+'A cat chases a dog'
+
+#3 （incorrect word order: SOV)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+一只 狗 一只 猫 追
+一-只 狗 一-只 猫 追
+a-CLF dog a-CLF cat chase
+'A dog a cat chase'
+
+#4 (incorrect word order： OSV)    
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+一只 猫 那只 狗 追
+一-只 猫 那-只 狗 追
+a-CLF cat the-CLF dog chase
+'A cat the dog chase'
+
+#5 (incorrect word order: VSO)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+追 那只 狗 一只 猫
+追 那-只 狗 一-只 猫
+chase the-CLF dog a-CLF cat
+'chase the dog a cat'
+
+#6 (incorrect word order: VOS)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+追 一只 猫 那只 狗
+追 一-只 猫 那-只 狗
+chase a-CLF cat the-CLF dog
+'chase a cat the dog'
+
+#7 (intransitive verb)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 在 唱歌
+他 在 唱歌
+he IPFV sing
+'He is singing'
+
+#8 (incorrect use of intransitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+他 在 唱歌 她
+他 在 唱歌 她
+he IPFV sing she
+'He is singing her'
+
+#9 (transitive verb)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 给 了 她
+他 给 了 她
+he give PST she
+'He gave it to her'
+
+#10 (ditransitive verb)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 给 了 她 一只 猫
+他 给 了 她 一-只 猫
+he give PST she a-CLF cat
+'He gave her a cat'
+
+#11 (auxiliary verb)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 要 唱歌
+他 要 唱歌
+he want sing
+'He wants to sing'
+
+#12 (incorrect auxiliary verb placement)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+他 唱歌 要
+他 唱歌 要
+he sing want
+'He sings want'
+
+#13 (double auxiliary verbs)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 应该 会 唱歌
+他 应该 会 唱歌
+he might know sing
+'He might know how to sing'
+
+#14 (incorrect double auxiliary verbs placement)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+他 唱歌 应该 会
+他 唱歌 应该 会
+he sing might know
+'He sing might know'
+
+#15 (incorrect double auxiliary verbs placement)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+他 应该 唱歌 会
+他 应该 唱歌 会
+he might sing know
+'He might sing know'
+
+#16 (incorrect double auxiliary verbs placement)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+他 会 唱歌 应该
+他 会 唱歌 应该
+he know sing might
+'He knows how to sing might'
+
+#17
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+我 会
+我 会
+I know
+'I know how'
+
+#18
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+我 给 了 他 一只 猫
+我 给 了 他 一-只 猫
+I give PST he a-CLF cat
+'I gave him a cat'
+
+#19
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+他 给 了 我 一只 猫
+他 给 了 我 一-只 猫
+he give PST I a-CLF cat
+'He gave me a cat'
+
+#20
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+他 给 了 那个 人 一只 猫
+他 给 了 那-个 人 一-只 猫
+he give PST that-CLF person a-CLF cat
+'He gave that person a cat'
+
+#21 (incorrect use of determiner before pronoun)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {pronouns}
+他 给 了 那个 我 一只 猫
+他 给 了 那-个 我 一-只 猫
+he give PST that-CLF I a-CLF cat
+'He gave that me a cat'
+
+#22 (locative inversion)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {case}
+那里 有 一只 猫
+那里 有 一-只 猫
+there exist a-CLF cat
+'There exists a cat'
+
+#23 (locative inversion)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {case}
+那里 有 猫
+那里 有 猫
+there exist cat
+'There exists a cat'
+
+#24
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {case}
+那里 有
+那里 有
+there exist
+'There exists'
+
+#25
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+那只 猫 在 唱歌
+那-只 猫 在 唱歌
+that-CLF cat IPFV sing
+'That cat is singing'
+
+#26
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+猫 在 唱歌
+猫 在 唱歌
+cat IPFV sing
+'A cat is singing'
+
+#27 (incorrect placement of determiner)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+猫 那只 在 唱歌
+猫 那-只 在 唱歌
+cat that-CLF IPFV sing
+'Cat that is singing'
+
+#28 (incorrect placement of determiner)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+猫 在 那只 唱歌
+猫 在 那-只 唱歌
+cat IPFV that-CLF sing
+'Cat is that singing'
+
+#29 (incorrect placement of determiner)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+猫 在 唱歌 那只
+猫 在 唱歌 那-只
+cat IPFV sing that-CLF
+'Cat is singing that'
+
+#30
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+小明 在 唱歌
+小明 在 唱歌
+xiaoming IPFV sing
+'Xiaoming is singing'
+
+#31 (determiner in proper noun is not required)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+那个 小明 在 唱歌
+那-个 小明 在 唱歌
+That-CLF xiaoming IPFV sing
+'The Xiaoming is singing'
+
+#32 (perfective aspect)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+他 给 了 我 一只 猫
+他 给 了 我 一-只 猫
+he give PST I a-CLF cat
+'He gave me a cat'
+
+#33 (ungrammatical perfective aspect)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+他 给 我 了 一只 猫
+他 给 我 了 一-只 猫
+he give I PST a-CLF cat
+'He gave me a cat'
+
+#34 (experiential aspect)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+他 给 过 我 一只 猫
+他 给 过 我 一-只 猫
+he give PRF I a-CLF cat
+'He gave me a cat before'
+
+#35 (ungrammatical experiential aspect)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+他 给 我 过 一只 猫
+他 给 我 过 一-只 猫
+he give I PRF a-CLF cat
+'He gave me a cat before'
+
+#36 (imperfective aspect)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+小明 在 唱歌
+小明 在 唱歌
+xiaoming IPFV sing
+'Xiaoming is singing'
+
+#37 (ungrammatical imperfective aspect)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+在 唱歌 小明
+在 唱歌 小明
+IPFV sing xiaoming
+'is singing xiaoming'
+
+#38
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {negation}
+他 不 要 唱歌
+他 不 要 唱歌
+he NEG want sing
+'He does not want to sing'
+
+#39 (incorrect placement of negation adverb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {negation}
+他 要 不 唱歌
+他 要 不 唱歌
+he want NEG sing
+'He wants no sing'
+
+#40 (negation for existential clause)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {negation}
+他 没 有 猫
+他 没 有 猫
+he NEG have cat
+'He does not have a cat'
+
+#41 (incorrect placement of negation adverb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {negation}
+他 有 没 猫
+他 有 没 猫
+he have NEG cat
+'He has no cat'
+
+#42
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+他 有 猫
+他 有 猫
+he have cat
+'He has a cat'
+
+#43
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+他 有
+他 有
+he have
+'He has it'
+
+#44 (missing object for transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {argument optionality}
+狗 追
+狗 追
+dog chase
+'Dog chase'
+
+#45
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+追 猫
+追 猫
+chase cat
+'Chase the cat'
+
+#46
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+追
+追
+chase
+'Chase it'
+
+#47
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+这只 猫
+这-只 猫
+DEM-CLF cat
+'This cat'
+
+#48
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+那只 猫
+那-只 猫
+DEM-CLF cat
+'That cat'
+
+#49 (incorrect placement of demonstrative)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+猫 那只
+猫 那-只
+cat DEM-CLF
+'Cat that'
+
+#50
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+一只 猫
+一-只 猫
+a-CLF cat
+'A cat'
+
+#51 (incorrect placement of determiner)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+猫 一只
+猫 一-只
+cat a-CLF
+'Cat a'
+
+#52
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Matrix yes-no questions}
+他 会 唱歌 吗
+他 会 唱歌 吗
+he know sing Q
+'Does he know how to sing?'
+
+#53 (incorrect placement of question particle)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Matrix yes-no questions}
+他 会 吗 唱歌
+他 会 吗 唱歌
+he know Q sing
+'Does he know how to sing?'
+
+#54 (incorrect placement of question particle)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Matrix yes-no questions}
+他 吗 会 唱歌
+他 吗 会 唱歌
+he Q know sing
+'Does he know how to sing?'
+
+#55 (incorrect placement of question particle)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Matrix yes-no questions}
+吗 他 会 唱歌
+吗 他 会 唱歌
+Q he know sing
+'Does he know how to sing?'
+
+#56
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Matrix yes-no questions, negation}
+他 不 会 唱歌 吗
+他 不 会 唱歌 吗
+he NEG know sing Q
+'Does he not know how to sing?'
+
+#57
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Coordination}
+我 和 他 追 一只 猫
+我 和 他 追 一-只 猫
+I and he chase a-CLF cat
+'Me and he chase a cat'
+
+#58
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Coordination}
+我 小明 和 他 追 一只 猫
+我 小明 和 他 追 一-只 猫
+I xiaoming and he chase a-CLF cat
+'Me, Xiaoming and he chase a cat'
+
+#59
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Coordination}
+我 和 小明 和 他 追 一只 猫
+我 和 小明 和 他 追 一-只 猫
+I and xiaoming and he chase a-CLF cat
+'Me and Xiaoming and he chase a cat'
+
+#60 (no coordination)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Coordination}
+我 小明 他 追 一只 猫
+我 小明 他 追 一-只 猫
+I xiaoming he chase a-CLF cat
+'Me, Xiaoming, he chase a cat'
+
+#61 (first coordinand is marked)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Coordination}
+和 我 小明 和 他 追 一只 猫
+和 我 小明 和 他 追 一-只 猫
+and I xiaoming and he chase a-CLF cat
+'And me, Xiaoming and he chase a cat'
+
+#62 (first coordinand is marked)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Coordination}
+和 我 和 小明 和 他 追 一只 猫
+和 我 和 小明 和 他 追 一-只 猫
+and I and xiaoming and he chase a-CLF cat
+'And me and Xiaoming and he chase a cat'
+
+#63
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Adjectives}
+她 要 一只 可爱 的 猫
+她 要 一-只 可爱 的 猫
+she want a-CLF cute REL cat
+'She wants a cute cat'
+
+#64 (incorrect placement of adjective)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Adjectives}
+她 要 一只 猫 可爱 的
+她 要 一-只 猫 可爱 的
+she want a-CLF cat cute REL
+'She wants a cat cute'
+
+#65
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Adverbs}
+她 高兴 地 唱歌
+她 高兴 地 唱歌
+she happy de sing
+'She sings happily'
+
+#66
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Adverbs}
+她 地 高兴 唱歌
+她 地 高兴 唱歌
+she de happy sing
+'She sings happily'
+
+#67
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Embedded declaratives}
+她 觉得 他 不 会 唱歌
+她 觉得 他 不 会 唱歌
+she think he NEG know sing
+'She thinks that he cannot sing'
+
+#68 (incorrect complementizer)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Embedded declaratives}
+她 觉得 他 是否 不 会 唱歌
+她 觉得 他 是否 不 会 唱歌
+she think he COMP NEG know sing
+'She thinks that whether he cannot sing'
+
+#69
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Embedded questions}
+她 问 他 是否 会 唱歌
+她 问 他 是否 会 唱歌
+she ask he COMP know sing
+'She asks whether he knows how to sing'
+
+#70 (missing complementizer)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Embedded questions}
+她 问 他 会 唱歌
+她 问 他 会 唱歌
+she ask he know sing
+'She asks he knows how to sing'
+
+#71
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Non-Verbal Predicates}
+那只 猫 很 可爱
+那-只 猫 很 可爱
+that-CLF cat COP cute
+'That cat is cute'
+
+#72 (missing copula)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Non-Verbal Predicates}
+那只 猫 可爱
+那-只 猫 可爱
+that-CLF cat cute
+'That cat cute'
+
+#73
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Adjectives}
+她 要 一只 白 猫
+她 要 一-只 白 猫
+she want a-CLF gray cat
+'She wants a gray cat'
+
+#74 (incorrect placement of adjective)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Adjectives}
+她 要 一只 猫 白
+她 要 一-只 猫 白
+she want a-CLF cat white
+'She wants a cat white'
+
+#75
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {Adverbs}
+她 大概 知道
+她 大概 知道
+she roughly know
+'She roughly knows'
+
+#76
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {Adverbs}
+她 知道 大概
+她 知道 大概
+she know roughly
+'She roughly know'

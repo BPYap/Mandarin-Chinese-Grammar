@@ -1,0 +1,76 @@
+1@author@@@1@wo@那只 狗 追 一只 猫@@@@1@5@the-CLF dog chase a-CLF cat'The dog chases a cat'@yap boon peng@february 17, 2020
+2@author@@@1@wo@一只 猫 追 一只 狗@@@@1@5@a-CLF cat chase a-CLF dog'A cat chases a dog'@yap boon peng@february 17, 2020
+3@author@@@1@wo@一只 狗 一只 猫 追@@@@0@5@a-CLF dog a-CLF cat chase'A dog a cat chase'@yap boon peng@february 17, 2020
+4@author@@@1@wo@一只 猫 那只 狗 追@@@@0@5@a-CLF cat the-CLF dog chase'A cat the dog chase'@yap boon peng@february 17, 2020
+5@author@@@1@wo@追 那只 狗 一只 猫@@@@0@5@chase the-CLF dog a-CLF cat'chase the dog a cat'@yap boon peng@february 17, 2020
+6@author@@@1@wo@追 一只 猫 那只 狗@@@@0@5@chase a-CLF cat the-CLF dog'chase a cat the dog'@yap boon peng@february 17, 2020
+7@author@@@1@wo@他 在 唱歌@@@@1@3@he IPFV sing'He is singing'@yap boon peng@february 17, 2020
+8@author@@@1@wo@他 在 唱歌 她@@@@0@4@he IPFV sing she'He is singing her'@yap boon peng@february 17, 2020
+9@author@@@1@wo@他 给 了 她@@@@1@4@he give PST she'He gave it to her'@yap boon peng@february 17, 2020
+10@author@@@1@wo@他 给 了 她 一只 猫@@@@1@6@he give PST she a-CLF cat'He gave her a cat'@yap boon peng@february 17, 2020
+11@author@@@1@wo@他 要 唱歌@@@@1@3@he want sing'He wants to sing'@yap boon peng@february 17, 2020
+12@author@@@1@wo@他 唱歌 要@@@@0@3@he sing want'He sings want'@yap boon peng@february 17, 2020
+13@author@@@1@wo@他 应该 会 唱歌@@@@1@4@he might know sing'He might know how to sing'@yap boon peng@february 17, 2020
+14@author@@@1@wo@他 唱歌 应该 会@@@@0@4@he sing might know'He sing might know'@yap boon peng@february 17, 2020
+15@author@@@1@wo@他 应该 唱歌 会@@@@0@4@he might sing know'He might sing know'@yap boon peng@february 17, 2020
+16@author@@@1@wo@他 会 唱歌 应该@@@@0@4@he know sing might'He knows how to sing might'@yap boon peng@february 17, 2020
+17@author@@@1@pn@我 会@@@@1@2@I know'I know how'@yap boon peng@february 17, 2020
+18@author@@@1@pn@我 给 了 他 一只 猫@@@@1@6@I give PST he a-CLF cat'I gave him a cat'@yap boon peng@february 17, 2020
+19@author@@@1@pn@他 给 了 我 一只 猫@@@@1@6@he give PST I a-CLF cat'He gave me a cat'@yap boon peng@february 17, 2020
+20@author@@@1@pn@他 给 了 那个 人 一只 猫@@@@1@7@he give PST that-CLF person a-CLF cat'He gave that person a cat'@yap boon peng@february 17, 2020
+21@author@@@1@pn@他 给 了 那个 我 一只 猫@@@@0@7@he give PST that-CLF I a-CLF cat'He gave that me a cat'@yap boon peng@february 17, 2020
+22@author@@@1@c@那里 有 一只 猫@@@@1@4@there exist a-CLF cat'There exists a cat'@yap boon peng@february 17, 2020
+23@author@@@1@c@那里 有 猫@@@@1@3@there exist cat'There exists a cat'@yap boon peng@february 17, 2020
+24@author@@@1@c@那里 有@@@@1@2@there exist'There exists'@yap boon peng@february 17, 2020
+25@author@@@1@det@那只 猫 在 唱歌@@@@1@4@that-CLF cat IPFV sing'That cat is singing'@yap boon peng@february 17, 2020
+26@author@@@1@det@猫 在 唱歌@@@@1@3@cat IPFV sing'A cat is singing'@yap boon peng@february 17, 2020
+27@author@@@1@det@猫 那只 在 唱歌@@@@0@4@cat that-CLF IPFV sing'Cat that is singing'@yap boon peng@february 17, 2020
+28@author@@@1@det@猫 在 那只 唱歌@@@@0@4@cat IPFV that-CLF sing'Cat is that singing'@yap boon peng@february 17, 2020
+29@author@@@1@det@猫 在 唱歌 那只@@@@0@4@cat IPFV sing that-CLF'Cat is singing that'@yap boon peng@february 17, 2020
+30@author@@@1@det@小明 在 唱歌@@@@1@3@xiaoming IPFV sing'Xiaoming is singing'@yap boon peng@february 17, 2020
+31@author@@@1@det@那个 小明 在 唱歌@@@@0@4@That-CLF xiaoming IPFV sing'The Xiaoming is singing'@yap boon peng@february 17, 2020
+32@author@@@1@tam@他 给 了 我 一只 猫@@@@1@6@he give PST I a-CLF cat'He gave me a cat'@yap boon peng@february 17, 2020
+33@author@@@1@tam@他 给 我 了 一只 猫@@@@0@6@he give I PST a-CLF cat'He gave me a cat'@yap boon peng@february 17, 2020
+34@author@@@1@tam@他 给 过 我 一只 猫@@@@1@6@he give PRF I a-CLF cat'He gave me a cat before'@yap boon peng@february 17, 2020
+35@author@@@1@tam@他 给 我 过 一只 猫@@@@0@6@he give I PRF a-CLF cat'He gave me a cat before'@yap boon peng@february 17, 2020
+36@author@@@1@tam@小明 在 唱歌@@@@1@3@xiaoming IPFV sing'Xiaoming is singing'@yap boon peng@february 17, 2020
+37@author@@@1@tam@在 唱歌 小明@@@@0@3@IPFV sing xiaoming'is singing xiaoming'@yap boon peng@february 17, 2020
+38@author@@@1@neg@他 不 要 唱歌@@@@1@4@he NEG want sing'He does not want to sing'@yap boon peng@february 17, 2020
+39@author@@@1@neg@他 要 不 唱歌@@@@0@4@he want NEG sing'He wants no sing'@yap boon peng@february 17, 2020
+40@author@@@1@neg@他 没 有 猫@@@@1@4@he NEG have cat'He does not have a cat'@yap boon peng@february 17, 2020
+41@author@@@1@neg@他 有 没 猫@@@@0@4@he have NEG cat'He has no cat'@yap boon peng@february 17, 2020
+42@author@@@1@pro-d@他 有 猫@@@@1@3@he have cat'He has a cat'@yap boon peng@february 17, 2020
+43@author@@@1@pro-d@他 有@@@@1@2@he have'He has it'@yap boon peng@february 17, 2020
+44@author@@@1@pro-d@狗 追@@@@0@2@dog chase'Dog chase'@yap boon peng@february 17, 2020
+45@author@@@1@pro-d@追 猫@@@@1@2@chase cat'Chase the cat'@yap boon peng@february 17, 2020
+46@author@@@1@pro-d@追@@@@1@1@chase'Chase it'@yap boon peng@february 17, 2020
+47@author@@@1@cognitivestatus@这只 猫@@@@1@2@DEM-CLF cat'This cat'@yap boon peng@february 17, 2020
+48@author@@@1@cognitivestatus@那只 猫@@@@1@2@DEM-CLF cat'That cat'@yap boon peng@february 17, 2020
+49@author@@@1@cognitivestatus@猫 那只@@@@0@2@cat DEM-CLF'Cat that'@yap boon peng@february 17, 2020
+50@author@@@1@cognitivestatus@一只 猫@@@@1@2@a-CLF cat'A cat'@yap boon peng@february 17, 2020
+51@author@@@1@cognitivestatus@猫 一只@@@@0@2@cat a-CLF'Cat a'@yap boon peng@february 17, 2020
+52@author@@@1@q@他 会 唱歌 吗@@@@1@4@he know sing Q'Does he know how to sing?'@yap boon peng@february 17, 2020
+53@author@@@1@q@他 会 吗 唱歌@@@@0@4@he know Q sing'Does he know how to sing?'@yap boon peng@february 17, 2020
+54@author@@@1@q@他 吗 会 唱歌@@@@0@4@he Q know sing'Does he know how to sing?'@yap boon peng@february 17, 2020
+55@author@@@1@q@吗 他 会 唱歌@@@@0@4@Q he know sing'Does he know how to sing?'@yap boon peng@february 17, 2020
+56@author@@@1@q,neg@他 不 会 唱歌 吗@@@@1@5@he NEG know sing Q'Does he not know how to sing?'@yap boon peng@february 17, 2020
+57@author@@@1@crd@我 和 他 追 一只 猫@@@@1@6@I and he chase a-CLF cat'Me and he chase a cat'@yap boon peng@february 17, 2020
+58@author@@@1@crd@我 小明 和 他 追 一只 猫@@@@1@7@I xiaoming and he chase a-CLF cat'Me, Xiaoming and he chase a cat'@yap boon peng@february 17, 2020
+59@author@@@1@crd@我 和 小明 和 他 追 一只 猫@@@@1@8@I and xiaoming and he chase a-CLF cat'Me and Xiaoming and he chase a cat'@yap boon peng@february 17, 2020
+60@author@@@1@crd@我 小明 他 追 一只 猫@@@@0@6@I xiaoming he chase a-CLF cat'Me, Xiaoming, he chase a cat'@yap boon peng@february 17, 2020
+61@author@@@1@crd@和 我 小明 和 他 追 一只 猫@@@@0@8@and I xiaoming and he chase a-CLF cat'And me, Xiaoming and he chase a cat'@yap boon peng@february 17, 2020
+62@author@@@1@crd@和 我 和 小明 和 他 追 一只 猫@@@@0@9@and I and xiaoming and he chase a-CLF cat'And me and Xiaoming and he chase a cat'@yap boon peng@february 17, 2020
+63@author@@@1@adj@她 要 一只 可爱 的 猫@@@@1@6@she want a-CLF cute REL cat'She wants a cute cat'@yap boon peng@february 17, 2020
+64@author@@@1@adj@她 要 一只 猫 可爱 的@@@@0@6@she want a-CLF cat cute REL'She wants a cat cute'@yap boon peng@february 17, 2020
+65@author@@@1@adv@她 高兴 地 唱歌@@@@1@4@she happy de sing'She sings happily'@yap boon peng@february 17, 2020
+66@author@@@1@adv@她 地 高兴 唱歌@@@@0@4@she de happy sing'She sings happily'@yap boon peng@february 17, 2020
+67@author@@@1@emb-d@她 觉得 他 不 会 唱歌@@@@1@6@she think he NEG know sing'She thinks that he cannot sing'@yap boon peng@february 17, 2020
+68@author@@@1@emb-d@她 觉得 他 是否 不 会 唱歌@@@@0@7@she think he COMP NEG know sing'She thinks that whether he cannot sing'@yap boon peng@february 17, 2020
+69@author@@@1@emb-q@她 问 他 是否 会 唱歌@@@@1@6@she ask he COMP know sing'She asks whether he knows how to sing'@yap boon peng@february 17, 2020
+70@author@@@1@emb-q@她 问 他 会 唱歌@@@@0@5@she ask he know sing'She asks he knows how to sing'@yap boon peng@february 17, 2020
+71@author@@@1@non-verbalpredicates@那只 猫 很 可爱@@@@1@4@that-CLF cat COP cute'That cat is cute'@yap boon peng@february 17, 2020
+72@author@@@1@non-verbalpredicates@那只 猫 可爱@@@@0@3@that-CLF cat cute'That cat cute'@yap boon peng@february 17, 2020
+73@author@@@1@adj@她 要 一只 白 猫@@@@1@5@she want a-CLF gray cat'She wants a gray cat'@yap boon peng@february 17, 2020
+74@author@@@1@adj@她 要 一只 猫 白@@@@0@5@she want a-CLF cat white'She wants a cat white'@yap boon peng@february 17, 2020
+75@author@@@1@adv@她 大概 知道@@@@1@3@she roughly know'She roughly knows'@yap boon peng@february 17, 2020
+76@author@@@1@adv@她 知道 大概@@@@0@3@she know roughly'She roughly know'@yap boon peng@february 17, 2020
