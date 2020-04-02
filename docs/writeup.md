@@ -1,12 +1,31 @@
-## Phenomena captured by the customization system
+## Table of Contents  
+* [Phenomena specified by the LinGO Grammar Matrix customization system](#choice)  
+* [Phenomena specified by .tdl files](#tdl) 
+* [Parse results](#parse)   
+* [Limitations](#limitations)
+* [Suggestions](#suggestions)
+
+
+## Phenomena specified by the LinGO Grammar Matrix customization system <a name="choice"/>
 ### Word Order
-The basic word order in Mandarin Chinese is subject-verb-object (SVO), with determiners and auxiliary verbs precede nouns and complements respectively. These phenomena are specified in the `Word Order` section of the LinGO Grammar Matrix customization page.
+The basic word order in Mandarin Chinese is subject-verb-object (SVO), with determiners and auxiliary verbs precede nouns and complements respectively. These phenomena are specified in the `Word Order` section of the customization system.
 
 ### Number, Person, Gender
 
 ### Case
 
-## Parse results
+
+
+## Phenomena specified by .tdl files <a name="tdl"/>
+### Complement of Auxiliary Verb
+
+### Demonstratives (Determinative Nouns)
+
+### Embedded Clauses
+
+
+
+## Parse results <a name="parse"/>
 ### True Positive
 ```
 delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01/
@@ -39,6 +58,7 @@ delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01
 | 23. | 那只 猫 很 可爱             | Non-Verbal Predicates             |
 | 24. | 她 要 一只 白 猫            | Adjectives                        |
 | 25. | 她 大概 知道                | Adverbs                           |
+| 26. | 她 问 他 是否 会 唱歌       | Embedded questions                |
 
 
 ### True negative
@@ -109,4 +129,8 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 | 12. | 一只 猫                  | Cognitive status     |         |
 | 13. | 她 要 一只 可爱 的 猫    | Adjectives           |         |
 | 14. | 她 高兴 地 唱歌          | Adverbs              |         |
-| 15. | 她 问 他 是否 会 唱歌    | Embedded questions   |         |
+
+
+## Limitations <a name="limitations"/>
+
+## Suggestions <a name="suggestions"/>
