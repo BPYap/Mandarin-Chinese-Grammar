@@ -42,6 +42,7 @@ nonfinite := form.
 finite := form.
 
 ;;; Aspect
+marker := head.
 
 perfective := aspect.
 imperfective := aspect.
@@ -391,6 +392,7 @@ comps2-complementizer-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.LOCAL.CAT.MC -,
                        HEAD.INIT + ] ].
 
+
 ;;; Others
 
 ;;; Determiners
@@ -417,7 +419,7 @@ common-determiner-lex := determiner-lex & no-icons-lex-item.
 ;;it applies to all wo implementations, except for v2
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT + ].
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT bool ]. ;+
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
@@ -432,7 +434,7 @@ bare-np-phrase := basic-bare-np-phrase &
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
   [ SYNSEM.LOCAL.CAT.HEAD comp,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT - ].
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT bool ]. ; -
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
@@ -547,3 +549,40 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
                     ALTKEYREL #det ]]].
 
 n+det-lex := noun+det-lex-item.
+
+
+basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
+  [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,
+					    COMPS #comps,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ] ],
+    HEAD-DTR.SYNSEM #synsem & [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+						    COMPS #comps,
+						    SPR #spr,
+						    SPEC #spec ],
+					      POSTHEAD #ph ] ] ],
+    NON-HEAD-DTR [ SYNSEM [ LOCAL.CAT [	HEAD marker,
+					VAL.COMPS < #synsem > ] ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+	     ICONS <! !> ] ].
+
+head-marker-phrase := basic-head-marker-phrase & marker-final-phrase & head-initial.
+
+;;; Aspect marker
+
+aspect-marker := raise-sem-lex-item & no-icons-lex-item &
+                  norm-zero-arg &
+ [ SYNSEM [ LOCAL [ CAT [ HEAD marker & [ MOD <> ],
+			   VAL [ COMPS < lex-synsem & 
+					 [ LOCAL [ CAT [ HEAD verb & [ AUX - ],
+                                                         VAL.SUBJ < [] > ] ] ] >,
+				 SUBJ < >,
+				 SPEC < >,
+				 SPR < > ],
+			   POSTHEAD + ] ] ] ].
+
+aspect-lex-item := aspect-marker & 
+ [ SYNSEM.LOCAL.CAT.VAL [ COMPS < [ LOCAL [CONT.HOOK.INDEX.E.ASPECT perfective,
+                                           CAT.HEAD verb ] ] > ] ].

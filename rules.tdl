@@ -54,3 +54,5 @@ vp2-bottom-coord := vp2-bottom-coord-rule.
 s2-top-coord := s2-top-coord-rule.
 
 s2-bottom-coord := s2-bottom-coord-rule.
+
+head-marker := head-marker-phrase.

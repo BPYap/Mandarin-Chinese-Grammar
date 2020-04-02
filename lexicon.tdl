@@ -114,8 +114,8 @@
 在 := inperfective-aux-lex &
   [ STEM < "在" > ].
 
-了 := perfective-aux-lex &
-  [ STEM < "了" > ].
+; 了 := perfective-aux-lex &
+;   [ STEM < "了" > ].
 
 应该 := double_aux-aux-lex &
   [ STEM < "应该" > ].
@@ -192,3 +192,6 @@
 
 是否 := comps2-complementizer-lex-item &
   [ STEM < "是否" > ].
+
+了_asp := aspect-lex-item &
+ [ STEM < "了" > ].
