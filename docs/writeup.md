@@ -1,6 +1,6 @@
 ## Table of Contents  
 * [Phenomena specified by the LinGO Grammar Matrix customization system](#choice)  
-* [Phenomena specified by .tdl files](#tdl) 
+* [Phenomena specified by modifying .tdl files](#tdl) 
 * [Parse results](#parse)   
 * [Limitations](#limitations)
 * [Suggestions](#suggestions)
@@ -11,12 +11,62 @@
 The basic word order in Mandarin Chinese is subject-verb-object (SVO), with determiners and auxiliary verbs precede nouns and complements respectively. These phenomena are specified in the `Word Order` section of the customization system.
 
 ### Number, Person, Gender
+Not specified.
 
 ### Case
+Not specified.
+
+### Adnominal Possession
+Not specified.
+
+### Direct-inverse
+Not specified.
+
+### Tense, Aspect and Mood
+Verb tenses are not expressed in Mandarin Chinese. Instead several particles are used to express verbal aspect, as given below:
+* Perfective aspect "了" (e.g. "他给了她。")
+* Imperfective aspect "在" (e.g. "他在唱歌。")
+* Experiential aspect "过" (e.g. "他给过她。")
+
+### Evidentials
+Not specified.
+
+### Other Features
+Although Mandarin Chinese does not distinguish between finite and non-finite verb form, the `Add finite/non-finite FORM feature distinction.` option is still selected as it is a mandatory requirement when presence of auxiliary verbs were specified in the `Word Order` section.
+
+### Sentential Negation
+Negation construction in Mandarin Chinese is specified as a `simple` morphosyntactic exponence, in which a negative auxiliary verb "不" is introduced.
+
+### Coordination
+Two coordination strategies for the Mandarin Chinese Grammar is specified:
+* Monosyndeton ("我 你 和 她")
+* Polysyndeton ("我 和 你 和 她")
+
+### Matrix Yes/No Questions
+A question in the Mandarin Chinese Grammar is formed by introducing a sentence final particle "吗".
+
+### Information Structure
+Not specified.
+
+### Argument Optionality
+In Mandarin Chinese, subject dropping can occur with any verb in any context (e.g. "狗追猫。" and "追猫！" are both sensible sentences) while object dropping can only occur with certain lexical entries (e.g. dropping "猫" in "他有猫。" is ok but not "猫" in "狗追猫。").
+
+### Nominalized Clauses
+Not specified.
+
+### Clausal Complements
+Two types of clausal complements are specified in the Mandarin Chinese Grammar:
+* Clausal complements appearing in the same position as regular noun complements without a complementizer (e.g. "她觉得他会唱歌。" with "他会唱歌" as a clausal complement of "觉得").
+* Clausal complements appearing in the same position as regular noun complements with a complementizer "是否" (e.g. "她问他是否会唱歌。" with "会唱歌" as a clausal complement of "问").
+
+### Clausal Modifiers
+Not specified.
+
+### Morphology
+Not applicable.
 
 
-
-## Phenomena specified by .tdl files <a name="tdl"/>
+## Phenomena specified by modifying .tdl files <a name="tdl"/>
 ### Complement of Auxiliary Verb
 
 ### Demonstratives (Determinative Nouns)
@@ -61,7 +111,7 @@ delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01
 | 26. | 她 问 他 是否 会 唱歌       | Embedded questions                |
 
 
-### True negative
+### True Negative
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite.01/
 ```
@@ -103,13 +153,13 @@ delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite.01
 | 34. | 她 要 一只 猫 白               | Adjectives              ||
 | 35. | 她 知道 大概                   | Adjectives              ||
 
-### False positive
+### False Positive
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings > 0' trees/testsuite.01/
 ```
 No false positive
 
-### False negative
+### False Negative
 ```
 delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01/
 ```
