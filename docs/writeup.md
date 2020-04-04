@@ -115,49 +115,49 @@ delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite.01/
 ```
-| No. | Sentence                       | Phenomena               | Remarks |
-|-----|--------------------------------|-------------------------|---------|
-| 1.  | 一只 狗 一只 猫 追             | Word order              ||
-| 2.  | 一只 猫 那只 狗 追             | Word order              ||
-| 3.  | 追 那只 狗 一只 猫             | Word order              ||
-| 4.  | 追 一只 猫 那只 狗             | Word order              ||
-| 5.  | 他 在 唱歌 她                  | Word order              ||
-| 6.  | 他 唱歌 要                     | Word order              ||
-| 7.  | 他 唱歌 应该 会                | Word order              ||
-| 8.  | 他 应该 唱歌 会                | Word order              ||
-| 9.  | 他 会 唱歌 应该                | Word order              ||
-| 10. | 他 给 了 那个 我 一只 猫       | Pronouns                ||
-| 11. | 猫 那只 在 唱歌                | Determiners             ||
-| 12. | 猫 在 那只 唱歌                | Determiners             ||
-| 13. | 猫 在 唱歌 那只                | Determiners             ||
-| 14. | 那个 小明 在 唱歌              | Determiners             ||
-| 15. | 他 给 我 了 一只 猫            | Tense Aspect Mood       ||
-| 16. | 他 给 我 过 一只 猫            | Tense Aspect Mood       ||
-| 17. | 在 唱歌 小明                   | Tense Aspect Mood       ||
-| 18. | 他 要 不 唱歌                  | Negation                ||
-| 19. | 他 有 没 猫                    | Negation                ||
-| 20. | 狗 追                          | Argument Optionality    ||
-| 21. | 猫 那只                        | Cognitive Status        ||
-| 22. | 猫 一只                        | Cognitive Status        ||
-| 23. | 他 会 吗 唱歌                  | Matrix yes-no questions ||
-| 24. | 他 吗 会 唱歌                  | Matrix yes-no questions ||
-| 25. | 吗 他 会 唱歌                  | Matrix yes-no questions ||
-| 26. | 我 小明 他 追 一只 猫          | Coordination            ||
-| 27. | 和 我 小明 和 他 追 一只 猫    | Coordination            ||
-| 28. | 和 我 和 小明 和 他 追 一只 猫 | Coordination            ||
-| 29. | 要 一只 猫 可爱 的             | Adjectives              ||
-| 30. | 她 地 高兴 唱歌                | Adverbs                 ||
-| 31. | 她 觉得 他 是否 不 会 唱歌     | Embedded declaratives   ||
-| 32. | 她 问 他 会 唱歌               | Embedded questions      ||
-| 33. | 那只 猫 可爱                   | Non-Verbal Predicates   ||
-| 34. | 她 要 一只 猫 白               | Adjectives              ||
-| 35. | 她 知道 大概                   | Adjectives              ||
+| No. | Sentence                       | Phenomena               |    Remarks      |
+|-----|--------------------------------|-------------------------|-----------------|
+| 1.  | 一只 狗 一只 猫 追             | Word order                 | SOV word order |
+| 2.  | 一只 猫 那只 狗 追             | Word order                 | OSV word order |
+| 3.  | 追 那只 狗 一只 猫             | Word order                 | VSO word order |
+| 4.  | 追 一只 猫 那只 狗             | Word order                 | VOS word order |
+| 5.  | 他 在 唱歌 她                  | Word order                | Object in intransitive verb |
+| 6.  | 他 唱歌 要                     | Word order                | Auxiliary verb after verb  |
+| 7.  | 他 唱歌 应该 会                | Word order                 | Auxiliary verb after verb |
+| 8.  | 他 应该 唱歌 会                | Word order                 | Auxiliary verb after verb |
+| 9.  | 他 会 唱歌 应该                | Word order                 | Auxiliary verb after verb |
+| 10. | 他 给 了 那个 我 一只 猫       | Pronouns                    | Determiner before pronoun |
+| 11. | 猫 那只 在 唱歌                | Determiners                | Determiner after noun |
+| 12. | 猫 在 那只 唱歌                | Determiners                | Determiner after noun |
+| 13. | 猫 在 唱歌 那只                | Determiners                | Determiner after noun |
+| 14. | 那个 小明 在 唱歌              | Determiners                | Determiner before proper noun |
+| 15. | 他 给 我 了 一只 猫            | Tense Aspect Mood          | Perfective aspect after pronoun |
+| 16. | 他 给 我 过 一只 猫            | Tense Aspect Mood          | Experiential aspect after pronoun |
+| 17. | 在 唱歌 小明                   | Tense Aspect Mood         | Subject after imperfective aspect |
+| 18. | 他 要 不 唱歌                  | Negation                  | Negative auxiliary verb after verb |
+| 19. | 他 有 没 猫                    | Negation                  | Negative auxiliary verb after verb |
+| 20. | 狗 追                          | Argument Optionality     | Invalid object dropping |
+| 21. | 猫 那只                        | Cognitive Status         | Demonstrative after noun |
+| 22. | 猫 一只                        | Cognitive Status         | Demonstrative after noun |
+| 23. | 他 会 吗 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
+| 24. | 他 吗 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
+| 25. | 吗 他 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
+| 26. | 我 小明 他 追 一只 猫          | Coordination               | Missing coordinator |
+| 27. | 和 我 小明 和 他 追 一只 猫    | Coordination                | Sentence initial coordinator |
+| 28. | 和 我 和 小明 和 他 追 一只 猫 | Coordination                | Sentence initial coordinator |
+| 29. | 要 一只 猫 可爱 的             | Adjectives                 | Adjective after noun |
+| 30. | 她 地 高兴 唱歌                | Adverbs                    | Adverb before adjective |
+| 31. | 她 觉得 他 是否 不 会 唱歌     | Embedded declaratives       | Invalid complementizer |
+| 32. | 她 问 他 会 唱歌               | Embedded questions         | Missing complementizer or sentence final particle |
+| 33. | 那只 猫 可爱                   | Non-Verbal Predicates      | Missing modifier |
+| 34. | 她 要 一只 猫 白               | Adjectives                 | Adjective after noun |
+| 35. | 她 知道 大概                   | Adjectives                 | Adverb after verb |
 
 ### False Positive
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings > 0' trees/testsuite.01/
 ```
-No false positive
+No false positive.
 
 ### False Negative
 ```
@@ -165,20 +165,20 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 ```
 | No. | Sentence                 | Phenomena            | Remarks |
 |-----|--------------------------|----------------------|---------|
-| 1.  | 他 给 了 她              | Word order           |         |
-| 2.  | 他 给 了 她 一只 猫      | Word order           |         |
-| 3.  | 他 应该 会 唱歌          | Word order           |         |
-| 4.  | 我 给 了 他 一只 猫      | Pronouns             |         |
-| 5.  | 他 给 了 我 一只 猫      | Pronouns             |         |
-| 6.  | 他 给 了 那个 人 一只 猫 | Pronouns             |         |
-| 7.  | 他 给 了 我 一只 猫      | Tense Aspect Mood    |         |
-| 8.  | 他 给 过 我 一只 猫      | Tense Aspect Mood    |         |
-| 9.  | 追                       | Argument optionality |         |
-| 10. | 这只 猫                  | Cognitive status     |         |
-| 11. | 那只 猫                  | Cognitive status     |         |
-| 12. | 一只 猫                  | Cognitive status     |         |
-| 13. | 她 要 一只 可爱 的 猫    | Adjectives           |         |
-| 14. | 她 高兴 地 唱歌          | Adverbs              |         |
+| 1.  | 他 给 了 她              | Word order           | Perfective aspect |
+| 2.  | 他 给 了 她 一只 猫      | Word order           | Perfective aspect |
+| 3.  | 他 应该 会 唱歌          | Word order           | Double auxiliary verbs |
+| 4.  | 我 给 了 他 一只 猫      | Pronouns             | Perfective aspect |
+| 5.  | 他 给 了 我 一只 猫      | Pronouns             | Perfective aspect  |
+| 6.  | 他 给 了 那个 人 一只 猫 | Pronouns             | Perfective aspect |
+| 7.  | 他 给 了 我 一只 猫      | Tense Aspect Mood    | Perfective aspect |
+| 8.  | 他 给 过 我 一只 猫      | Tense Aspect Mood    | Experiential aspect |
+| 9.  | 追                       | Argument optionality | Fragment |
+| 10. | 这只 猫                  | Cognitive status     | Fragment |
+| 11. | 那只 猫                  | Cognitive status     | Fragment |
+| 12. | 一只 猫                  | Cognitive status     | Fragment |
+| 13. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
+| 14. | 她 高兴 地 唱歌          | Adverbs              | Adverb of manner |
 
 
 ## Limitations <a name="limitations"/>
