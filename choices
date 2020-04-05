@@ -48,10 +48,6 @@ section=sentential-negation
 neg-exp=1
 neg-aux=on
 neg-aux-index=2
-adv-neg=on
-neg-mod=v
-neg-order=before
-neg-adv-orth=不
 
 section=coordination
   cs1_n=on
