@@ -42,8 +42,8 @@ nonfinite := form.
 finite := form.
 
 ;;; Aspect
-marker := head.
 
+marker := head.
 perfective := aspect.
 imperfective := aspect.
 
@@ -128,6 +128,17 @@ clausal-verb-lex := main-verb-lex &
              [ LOCAL.CAT.VAL [ SPR < >,
                                COMPS < >,
                                SUBJ < > ] ] > ].
+                               
+ditr-clausal-verb-lex := main-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #obj, #clause >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #obj &
+             [ LOCAL.CAT [ HEAD noun,
+                           VAL.SPR < > ] ],
+             #clause &
+             [ LOCAL.CAT.VAL [ SPR < >,
+                               COMPS < >,
+                               SUBJ < > ] ] > ].
 
 common_transitive-verb-lex := transitive-verb-lex.
 
@@ -139,8 +150,14 @@ transitive_no_obj_drop-verb-lex := transitive-verb-lex &
 decl_comp-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD +vc ] > ].
 
-intr_comp-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
+tr_comp-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD comp ] > ].
+   
+ditr_comp-verb-lex := ditr-clausal-verb-lex & clausal-third-arg-ditrans-lex-item &
+"""
+    <ex> 他 问 他 是否 会 唱歌
+"""
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [], [ LOCAL.CAT.HEAD comp ] > ].
 
 no-obj-drop-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
@@ -392,7 +409,6 @@ comps2-complementizer-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.LOCAL.CAT.MC -,
                        HEAD.INIT + ] ].
 
-
 ;;; Others
 
 ;;; Determiners
@@ -549,7 +565,6 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
                     ALTKEYREL #det ]]].
 
 n+det-lex := noun+det-lex-item.
-
 
 basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
   [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,

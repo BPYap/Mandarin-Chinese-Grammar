@@ -85,7 +85,11 @@
   [ STEM < "觉得" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-问 := intr_comp-verb-lex &
+问_tr := tr_comp-verb-lex &
+  [ STEM < "问" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+    
+问_ditr := ditr_comp-verb-lex &
   [ STEM < "问" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
@@ -115,7 +119,7 @@
   [ STEM < "在" > ].
 
 ; 了 := perfective-aux-lex &
-;   [ STEM < "了" > ].
+  ; [ STEM < "了" > ].
 
 应该 := double_aux-aux-lex &
   [ STEM < "应该" > ].
@@ -123,8 +127,8 @@
 过 := experiential-aux-lex &
   [ STEM < "过" > ].
 
-;;; 地 := manner_adverb-aux-lex &
-;;;  [ STEM < "地" > ].
+; 地 := manner_adverb-aux-lex &
+ ; [ STEM < "地" > ].
 
 的 := relative_marker-aux-lex &
   [ STEM < "的" > ].
@@ -192,6 +196,8 @@
 
 是否 := comps2-complementizer-lex-item &
   [ STEM < "是否" > ].
+
+;;; Aspects
 
 了_asp := aspect-lex-item &
  [ STEM < "了" > ].
