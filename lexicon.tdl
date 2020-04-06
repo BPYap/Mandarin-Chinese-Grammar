@@ -68,8 +68,8 @@
 唱歌 := common_intransitive-verb-lex &
   [ STEM < "唱歌" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sing_v_rel" ].
-
-知道 := common_intransitive-verb-lex &
+    
+知道 := decl_comp-verb-lex &
   [ STEM < "知道" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
@@ -101,7 +101,7 @@
 
 会_aux := common-aux-lex &
   [ STEM < "会" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
 
 大概 := common-aux-lex &
   [ STEM < "大概" >,
