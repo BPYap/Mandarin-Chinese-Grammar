@@ -38,7 +38,7 @@ Although Mandarin Chinese does not distinguish between finite and non-finite ver
 Negation construction in Mandarin Chinese is specified as a `simple` morphosyntactic exponence, in which a negative auxiliary verb "不" is introduced.
 
 ### Coordination
-Two coordination strategies for the Mandarin Chinese Grammar is specified:
+Two coordination strategies for the Mandarin Chinese Grammar are specified:
 * Monosyndeton ("我 你 和 她")
 * Polysyndeton ("我 和 你 和 她")
 
@@ -68,10 +68,95 @@ Not applicable.
 
 ## Phenomena specified by modifying .tdl files <a name="tdl"/>
 ### Complement of Auxiliary Verb
+The auxiliary verb "要" is assigned to be a subclass of `common-aux-lex` by the grammar customization system, which permits usage of double auxiliary verbs. Hence, sentences such as "他不要唱歌。" and "他要不唱歌。" will produce parse results. However, the latter parse result is invalid because "他要不唱歌。" is a grammatically incorrect sentence. To rectify this issue, a new lexical rule `yao-aux-lex` is added to make sure that the complement of "要" is not an auxiliary verb:
+```
+yao-aux-lex := common-aux-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.AUX -].
+```
+Subsequently, the lexical entry of the auxiliary verb "要" is modified as follow:
+```
+要_aux := yao-aux-lex &
+  [ STEM < "要" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+```
 
-### Demonstratives (Determinative Nouns)
+### Demonstratives
+Determiners such as "那个"， "一只" can either be used as a quantifier for other nouns to form a noun phrase (e.g. "那个人", "一只猫") or as a standalone demonstrative pronoun. If they are used as demonstrative pronouns, they contribute multiple predicates to the semantics, which can be specified via the following lexical rule:
+```
+noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
+    [SYNSEM [LOCAL [CAT [ HEAD noun,
+                          VAL [ SPR < >, COMPS < >,
+                                SUBJ < >, SPEC < > ]],
+                    CONT [RELS <! relation &
+                            [LBL #nh, ARG0 #s ],
+                            quant-relation & #det &
+                            [ARG0 #s, RSTR #h ]!>,
+                         HCONS <! qeq & [ HARG #h,
+                                          LARG #nh ] !> ]],
+            LKEYS [ KEYREL relation,
+                    ALTKEYREL #det ]]].
 
-### Embedded Clauses
+n+det-lex := noun+det-lex-item.
+```
+Some example lexical entries of demonstrative pronouns：
+```
+那只_n := n+det-lex &
+  [ STEM < "那只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_that_q_rel" ].
+
+一只_n := n+det-lex &
+  [ STEM < "一只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_a_q_rel" ].
+    
+那个_n := n+det-lex &
+  [ STEM < "那个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_that_q_rel" ].
+```
+
+### Complements of Ditransitive Verb
+The complements of a ditransitive verb consist of a noun phrase and an embedded clause. For example, given the sentence "他问她是否会唱歌。", "问" is the ditransitive verb, "她" and "是否会唱歌" are the noun phrase and embedded clause respectively. This phenomenon is specified via the following lexical rules:
+```
+ditr-clausal-verb-lex := main-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #obj, #clause >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #obj &
+             [ LOCAL.CAT [ HEAD noun,
+                           VAL.SPR < > ] ],
+             #clause &
+             [ LOCAL.CAT.VAL [ SPR < >,
+                               COMPS < >,
+                               SUBJ < > ] ] > ].
+                               
+ditr_comp-verb-lex := ditr-clausal-verb-lex & clausal-third-arg-ditrans-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [], [ LOCAL.CAT.HEAD comp ] > ].
+```
+Follow by the lexical entries of ditransitive "问":
+```
+问_ditr := ditr_comp-verb-lex &
+  [ STEM < "问" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+```
+
+### Adposition
+Some adjectives can be combined with the clitic '地' to form an adverb of manner. For example, given the sentence "她高兴地唱歌。", the adjective "高兴" is combined with "地" to form an adverb which modifies the verb "唱歌". This phenomenon is specified via the following lexical rules:
+```
+adj-to-adv-lex := no-icons-lex-item & raise-sem-lex-item &
+                  trans-first-arg-raising-lex-item-2 &
+                  intersective-mod-lex &
+    [ SYNSEM.LOCAL.CAT.HEAD adp,
+      SYNSEM.LOCAL.CAT.VAL.COMPS <[LOCAL.CAT.HEAD verb]>,
+      SYNSEM.LOCAL.CAT.HEAD.MOD <[LOCAL.CAT.HEAD adj]> ] .
+```
+Follow by the lexical entries of "地":
+```
+地_adp := adj-to-adv-lex &
+  [ STEM < "地" > ].
+```
+
+### Perfective Aspect
 
 
 
@@ -86,29 +171,34 @@ delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01
 | 1.  | 那只 狗 追 一只 猫          | Word order                        |
 | 2.  | 一只 猫 追 一只 狗          | Word order                        |
 | 3.  | 他 在 唱歌                  | Word order                        |
-| 4.  | 他 要 唱歌                  | Word order                        |
-| 5.  | 我 会                       | Pronouns                          |
-| 6.  | 那里 有 一只 猫             | Case                              |
-| 7.  | 那里 有 猫                  | Case                              |
-| 8.  | 那里 有                     | Case                              |
-| 9.  | 那只 猫 在 唱歌             | Determiners                       |
-| 10. | 猫 在 唱歌                  | Determiners                       |
-| 11. | 小明 在 唱歌                | Determiners, Tense Aspect Mood    |
-| 12. | 他 不 要 唱歌               | Negation                          |
-| 13. | 他 没 有 猫                 | Negation                          |
-| 14. | 他 有 猫                    | Argument optionality              |
-| 15. | 他 有                       | Argument optionality              |
-| 16. | 追 猫                       | Argument optionality              |
-| 17. | 他 会 唱歌 吗               | Matrix yes-no questions           |
-| 18. | 他 不 会 唱歌 吗            | Matrix yes-no questions, negation |
-| 19. | 我 和 他 追 一只 猫         | Coordination                      |
-| 20. | 我 小明 和 他 追 一只 猫    | Coordination                      |
-| 21. | 我 和 小明 和 他 追 一只 猫 | Coordination                      |
-| 22. | 她 觉得 他 不 会 唱歌       | Embedded declaratives             |
-| 23. | 那只 猫 很 可爱             | Non-Verbal Predicates             |
-| 24. | 她 要 一只 白 猫            | Adjectives                        |
-| 25. | 她 大概 知道                | Adverbs                           |
-| 26. | 她 问 他 是否 会 唱歌       | Embedded questions                |
+| 4.  | 他 给 了 她                 | Word order                        |
+| 5.  | 他 要 唱歌                  | Word order                        |
+| 6.  | 我 会                       | Pronouns                          |
+| 7.  | 那里 有 一只 猫             | Case                              |
+| 8.  | 那里 有 猫                  | Case                              |
+| 9.  | 那里 有                     | Case                              |
+| 10.  | 那只 猫 在 唱歌             | Determiners                       |
+| 11. | 猫 在 唱歌                  | Determiners                       |
+| 12. | 小明 在 唱歌                | Determiners, Tense Aspect Mood    |
+| 13. | 他 不 要 唱歌               | Negation                          |
+| 14. | 他 没 有 猫                 | Negation                          |
+| 15. | 他 有 猫                    | Argument optionality              |
+| 16. | 他 有                       | Argument optionality              |
+| 17. | 追 猫                       | Argument optionality              |
+| 18. | 这只 猫                     | Cognitive status                   |
+| 19. | 那只 猫                     | Cognitive status                   |
+| 20. | 一只 猫                     | Cognitive status                   |
+| 21. | 他 会 唱歌 吗               | Matrix yes-no questions           |
+| 22. | 他 不 会 唱歌 吗            | Matrix yes-no questions, negation |
+| 23. | 我 和 他 追 一只 猫         | Coordination                      |
+| 24. | 我 小明 和 他 追 一只 猫    | Coordination                      |
+| 25. | 我 和 小明 和 他 追 一只 猫 | Coordination                      |
+| 26. | 她 高兴 地 唱歌            | Adverbs                           |
+| 27. | 她 觉得 他 不 会 唱歌       | Embedded declaratives             |
+| 28. | 那只 猫 很 可爱             | Non-Verbal Predicates             |
+| 29. | 她 要 一只 白 猫            | Adjectives                        |
+| 30. | 她 大概 知道                | Adverbs                           |
+| 31. | 她 问 他 是否 会 唱歌       | Embedded questions                |
 
 
 ### True Negative
@@ -141,23 +231,24 @@ delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite.01
 | 22. | 猫 一只                        | Cognitive Status         | Demonstrative after noun |
 | 23. | 他 会 吗 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
 | 24. | 他 吗 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
-| 25. | 吗 他 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
-| 26. | 我 小明 他 追 一只 猫          | Coordination               | Missing coordinator |
-| 27. | 和 我 小明 和 他 追 一只 猫    | Coordination                | Sentence initial coordinator |
-| 28. | 和 我 和 小明 和 他 追 一只 猫 | Coordination                | Sentence initial coordinator |
-| 29. | 要 一只 猫 可爱 的             | Adjectives                 | Adjective after noun |
-| 30. | 她 地 高兴 唱歌                | Adverbs                    | Adverb before adjective |
-| 31. | 她 觉得 他 是否 不 会 唱歌     | Embedded declaratives       | Invalid complementizer |
-| 32. | 她 问 他 会 唱歌               | Embedded questions         | Missing complementizer or sentence final particle |
-| 33. | 那只 猫 可爱                   | Non-Verbal Predicates      | Missing modifier |
-| 34. | 她 要 一只 猫 白               | Adjectives                 | Adjective after noun |
-| 35. | 她 知道 大概                   | Adjectives                 | Adverb after verb |
+| 25. | 我 小明 他 追 一只 猫          | Coordination               | Missing coordinator |
+| 26. | 要 一只 猫 可爱 的             | Adjectives                 | Adjective after noun |
+| 27. | 她 地 高兴 唱歌                | Adverbs                    | Adverb before adjective |
+| 28. | 她 觉得 他 是否 不 会 唱歌     | Embedded declaratives       | Invalid complementizer |
+| 29. | 她 问 他 会 唱歌               | Embedded questions         | Missing complementizer or sentence final particle |
+| 30. | 那只 猫 可爱                   | Non-Verbal Predicates      | Missing modifier |
+| 31. | 她 要 一只 猫 白               | Adjectives                 | Adjective after noun |
+| 32. | 她 知道 大概                   | Adjectives                 | Adverb after verb |
 
 ### False Positive
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings > 0' trees/testsuite.01/
 ```
-No false positive.
+| No. | Sentence                       | Phenomena               |    Remarks      |
+|-----|--------------------------------|-------------------------|-----------------|
+| 1. | 吗 他 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
+| 2. | 和 我 小明 和 他 追 一只 猫    | Coordination                | Sentence initial coordinator |
+| 3. | 和 我 和 小明 和 他 追 一只 猫 | Coordination                | Sentence initial coordinator |
 
 ### False Negative
 ```
@@ -165,20 +256,15 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 ```
 | No. | Sentence                 | Phenomena            | Remarks |
 |-----|--------------------------|----------------------|---------|
-| 1.  | 他 给 了 她              | Word order           | Perfective aspect |
-| 2.  | 他 给 了 她 一只 猫      | Word order           | Perfective aspect |
-| 3.  | 他 应该 会 唱歌          | Word order           | Double auxiliary verbs |
-| 4.  | 我 给 了 他 一只 猫      | Pronouns             | Perfective aspect |
-| 5.  | 他 给 了 我 一只 猫      | Pronouns             | Perfective aspect  |
-| 6.  | 他 给 了 那个 人 一只 猫 | Pronouns             | Perfective aspect |
-| 7.  | 他 给 了 我 一只 猫      | Tense Aspect Mood    | Perfective aspect |
-| 8.  | 他 给 过 我 一只 猫      | Tense Aspect Mood    | Experiential aspect |
-| 9.  | 追                       | Argument optionality | Fragment |
-| 10. | 这只 猫                  | Cognitive status     | Fragment |
-| 11. | 那只 猫                  | Cognitive status     | Fragment |
-| 12. | 一只 猫                  | Cognitive status     | Fragment |
-| 13. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
-| 14. | 她 高兴 地 唱歌          | Adverbs              | Adverb of manner |
+| 1.  | 他 给 了 她 一只 猫      | Word order           | Perfective aspect |
+| 2.  | 他 应该 会 唱歌          | Word order           | Double auxiliary verbs |
+| 3.  | 我 给 了 他 一只 猫      | Pronouns             | Perfective aspect |
+| 4.  | 他 给 了 我 一只 猫      | Pronouns             | Perfective aspect  |
+| 5.  | 他 给 了 那个 人 一只 猫 | Pronouns             | Perfective aspect |
+| 6.  | 他 给 了 我 一只 猫      | Tense Aspect Mood    | Perfective aspect |
+| 7.  | 他 给 过 我 一只 猫      | Tense Aspect Mood    | Experiential aspect |
+| 8.  | 追                       | Argument optionality | Fragment |
+| 9. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
 
 
 ## Limitations <a name="limitations"/>
