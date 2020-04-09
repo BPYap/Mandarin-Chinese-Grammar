@@ -239,16 +239,15 @@ delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite.01
 | 30. | 那只 猫 可爱                   | Non-Verbal Predicates      | Missing modifier |
 | 31. | 她 要 一只 猫 白               | Adjectives                 | Adjective after noun |
 | 32. | 她 知道 大概                   | Adjectives                 | Adverb after verb |
+| 33. | 吗 他 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
+| 34. | 和 我 小明 和 他 追 一只 猫    | Coordination                | Sentence initial coordinator |
+| 35. | 和 我 和 小明 和 他 追 一只 猫 | Coordination                | Sentence initial coordinator |
 
 ### False Positive
 ```
 delphin select 'i-id i-input where i-wf = 0 and readings > 0' trees/testsuite.01/
 ```
-| No. | Sentence                       | Phenomena               |    Remarks      |
-|-----|--------------------------------|-------------------------|-----------------|
-| 1. | 吗 他 会 唱歌                  | Matrix yes-no questions   | Sentence final particle before words |
-| 2. | 和 我 小明 和 他 追 一只 猫    | Coordination                | Sentence initial coordinator |
-| 3. | 和 我 和 小明 和 他 追 一只 猫 | Coordination                | Sentence initial coordinator |
+No false positive
 
 ### False Negative
 ```

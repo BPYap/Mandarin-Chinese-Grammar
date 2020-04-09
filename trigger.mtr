@@ -7,7 +7,7 @@
 
 了_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.ASPECT perfective ] !>,
-    FLAGS.TRIGGER "了" ].
+    FLAGS.TRIGGER "了_asp" ].
 
 应该_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,

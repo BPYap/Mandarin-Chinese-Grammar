@@ -435,7 +435,7 @@ common-determiner-lex := determiner-lex & no-icons-lex-item.
 ;;it applies to all wo implementations, except for v2
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT bool ]. ;+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT + ].
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
