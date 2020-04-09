@@ -9,6 +9,10 @@
   [ STEM < "猫" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
     
+玻璃 := common-noun-lex &
+  [ STEM < "玻璃" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
+    
 东西 := common-noun-lex &
   [ STEM < "东西" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
@@ -20,6 +24,10 @@
 她 := common-noun-lex &
   [ STEM < "她" >,
     SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
+    
+它 := common-noun-lex &
+  [ STEM < "它" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
 
 我 := common-noun-lex &
   [ STEM < "我" >,
@@ -64,6 +72,14 @@
 会_verb := common_transitive-verb-lex &
   [ STEM < "会" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+    
+吃 := common_transitive-verb-lex &
+  [ STEM < "吃" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+    
+伤害 := common_transitive-verb-lex &
+  [ STEM < "伤害" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
 
 唱歌 := common_intransitive-verb-lex &
   [ STEM < "唱歌" >,
@@ -85,9 +101,9 @@
   [ STEM < "觉得" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-问_tr := tr_comp-verb-lex &
-  [ STEM < "问" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+; 问_tr := tr_comp-verb-lex &
+  ; [ STEM < "问" >,
+    ; SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
     
 问_ditr := ditr_comp-verb-lex &
   [ STEM < "问" >,
@@ -99,9 +115,13 @@
   [ STEM < "要" >,
     SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
 
-会_aux := common-aux-lex &
+会_aux := yao-aux-lex &
   [ STEM < "会" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_can_v_1_rel" ].
+    
+可以 := common-aux-lex &
+  [ STEM < "可以" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_can_v_2_rel" ].
 
 大概 := common-aux-lex &
   [ STEM < "大概" >,
