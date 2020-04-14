@@ -140,7 +140,7 @@ Follow by the lexical entries of ditransitive "问":
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 ```
 
-### Adposition
+### Adverb
 Some adjectives can be combined with the clitic '地' to form an adverb of manner. For example, given the sentence "她高兴地唱歌。", the adjective "高兴" is combined with "地" to form an adverb which modifies the verb "唱歌". This phenomenon is specified via the following lexical rules:
 ```
 adj-to-adv-lex := no-icons-lex-item & raise-sem-lex-item &
