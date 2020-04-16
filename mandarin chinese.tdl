@@ -331,6 +331,12 @@ manner_adverb-aux-lex := arg-comp-aux-no-pred &
 relative_marker-aux-lex := arg-comp-aux-no-pred &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
 
+yao-aux-lex := common-aux-lex &
+"""
+make sure head of complement is not an auxiliary
+"""
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.AUX -].
+
 ;;; Copulas
 
 cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-lex-item &
@@ -420,6 +426,71 @@ determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
                            SUBJ < > ] ].
 
 common-determiner-lex := determiner-lex & no-icons-lex-item.
+
+;;; Adverbs
+
+adj-to-adv-lex := no-icons-lex-item & raise-sem-lex-item & trans-first-arg-raising-lex-item-2 &
+                  intersective-mod-lex &
+"""
+combine an adjective to the left into an adverb 
+
+<ex> 她 高兴 地 唱歌
+"""
+    [ SYNSEM.LOCAL.CAT [ HEAD adp,
+                         VAL.COMPS < [ LOCAL.CAT.HEAD verb ] >,
+                         HEAD.MOD < [ LOCAL.CAT.HEAD adj ] > ] ].
+;;; Demonstratives
+
+noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
+    [SYNSEM [LOCAL [CAT [ HEAD noun,
+                          VAL [ SPR < >, COMPS < >,
+                                SUBJ < >, SPEC < > ]],
+                    CONT [RELS <! relation &
+                            [LBL #nh, ARG0 #s ],
+                            quant-relation & #det &
+                            [ARG0 #s, RSTR #h ]!>,
+                         HCONS <! qeq & [ HARG #h,
+                                          LARG #nh ] !> ]],
+            LKEYS [ KEYREL relation,
+                    ALTKEYREL #det ]]].
+
+n+det-lex := noun+det-lex-item.
+
+basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
+  [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,
+					    COMPS #comps,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ] ],
+    HEAD-DTR.SYNSEM #synsem & [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+						    COMPS #comps,
+						    SPR #spr,
+						    SPEC #spec ],
+					      POSTHEAD #ph ] ] ],
+    NON-HEAD-DTR [ SYNSEM [ LOCAL.CAT [	HEAD marker,
+					VAL.COMPS < #synsem > ] ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+	     ICONS <! !> ] ].
+
+head-marker-phrase := basic-head-marker-phrase & marker-final-phrase & head-initial.
+
+;;; Aspect marker
+
+aspect-marker := raise-sem-lex-item & no-icons-lex-item &
+                  norm-zero-arg &
+ [ SYNSEM [ LOCAL [ CAT [ HEAD marker & [ MOD <> ],
+			   VAL [ COMPS < lex-synsem & 
+					 [ LOCAL [ CAT [ HEAD verb & [ AUX - ],
+                                                         VAL.SUBJ < [] > ] ] ] >,
+				 SUBJ < >,
+				 SPEC < >,
+				 SPR < > ],
+			   POSTHEAD + ] ] ] ].
+
+aspect-lex-item := aspect-marker & 
+ [ SYNSEM.LOCAL.CAT.VAL [ COMPS < [ LOCAL [CONT.HOOK.INDEX.E.ASPECT perfective,
+                                           CAT.HEAD verb ] ] > ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -531,73 +602,3 @@ s2-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
 
 s2-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "2" ].
-    
-yao-aux-lex := common-aux-lex &
-"""
-make sure head of complement is not an auxiliary
-"""
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.AUX -].
-
-;;; Adposition
- 
-adj-to-adv-lex := no-icons-lex-item & raise-sem-lex-item & trans-first-arg-raising-lex-item-2 &
-                  intersective-mod-lex & ;;; no-rels-hcons-lex-item &
-"""
-block comment here
-
-"""
-    [ SYNSEM.LOCAL.CAT.HEAD adp,
-      SYNSEM.LOCAL.CAT.VAL.COMPS <[LOCAL.CAT.HEAD verb]>,
-      SYNSEM.LOCAL.CAT.HEAD.MOD <[LOCAL.CAT.HEAD adj]> ] .
-      
-      
-noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
-    [SYNSEM [LOCAL [CAT [ HEAD noun,
-                          VAL [ SPR < >, COMPS < >,
-                                SUBJ < >, SPEC < > ]],
-                    CONT [RELS <! relation &
-                            [LBL #nh, ARG0 #s ],
-                            quant-relation & #det &
-                            [ARG0 #s, RSTR #h ]!>,
-                         HCONS <! qeq & [ HARG #h,
-                                          LARG #nh ] !> ]],
-            LKEYS [ KEYREL relation,
-                    ALTKEYREL #det ]]].
-
-n+det-lex := noun+det-lex-item.
-
-basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
-  [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,
-					    COMPS #comps,
-					    SPR #spr,
-					    SPEC #spec ],
-				      POSTHEAD #ph ] ],
-    HEAD-DTR.SYNSEM #synsem & [ LOCAL [ CAT [ VAL [ SUBJ #subj,
-						    COMPS #comps,
-						    SPR #spr,
-						    SPEC #spec ],
-					      POSTHEAD #ph ] ] ],
-    NON-HEAD-DTR [ SYNSEM [ LOCAL.CAT [	HEAD marker,
-					VAL.COMPS < #synsem > ] ] ],
-    C-CONT [ RELS <! !>,
-             HCONS <! !>,
-	     ICONS <! !> ] ].
-
-head-marker-phrase := basic-head-marker-phrase & marker-final-phrase & head-initial.
-
-;;; Aspect marker
-
-aspect-marker := raise-sem-lex-item & no-icons-lex-item &
-                  norm-zero-arg &
- [ SYNSEM [ LOCAL [ CAT [ HEAD marker & [ MOD <> ],
-			   VAL [ COMPS < lex-synsem & 
-					 [ LOCAL [ CAT [ HEAD verb & [ AUX - ],
-                                                         VAL.SUBJ < [] > ] ] ] >,
-				 SUBJ < >,
-				 SPEC < >,
-				 SPR < > ],
-			   POSTHEAD + ] ] ] ].
-
-aspect-lex-item := aspect-marker & 
- [ SYNSEM.LOCAL.CAT.VAL [ COMPS < [ LOCAL [CONT.HOOK.INDEX.E.ASPECT perfective,
-                                           CAT.HEAD verb ] ] > ] ].
