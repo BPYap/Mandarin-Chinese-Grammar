@@ -23,8 +23,8 @@ Test sentences:
     12. 我 和 她 和 他 追 一只 猫
     13. 他 可以 吃 玻璃
     14. 他们 欺负 她
-    15. 这个 在 睡觉
-    16. 全部 在 吃 东西
+    15. 这只 在 睡觉
+    16. 每只 在 吃 东西
     17. 她 觉得 他 不 会 唱歌
     18. 那只 猫 很 可爱
     19. 他 即将要 睡觉
@@ -78,6 +78,7 @@ pred_map = {
     "_can_v_1_rel": "_can_v_rel",
     "_can_v_2_rel": "_can_v_rel",
     "_roughly_v_rel": "roughly_rel",
+    "_already_v_rel": "already_rel",
     # "_will_v_rel": "_will_v_rel",
     # "neg_rel": "neg_rel",
     "_not_v_rel": "neg_rel",

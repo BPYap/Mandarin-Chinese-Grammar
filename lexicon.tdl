@@ -163,6 +163,10 @@
   [ STEM < "大概" >,
     SYNSEM.LKEYS.KEYREL.PRED "_roughly_v_rel" ].
     
+已经 := common-aux-lex &
+  [ STEM < "已经" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_already_v_rel" ].
+    
 即将要 := common-aux-lex &
   [ STEM < "即将要" >,
     SYNSEM.LKEYS.KEYREL.PRED "_will_v_rel" ].
@@ -266,12 +270,21 @@
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
     SYNSEM.LKEYS.ALTKEYREL.PRED "_those_q_rel" ].
 
-全部_q := common-determiner-lex &
-  [ STEM < "全部" >,
+每只_q := common-determiner-lex &
+  [ STEM < "每只" >,
     SYNSEM.LKEYS.KEYREL.PRED "_every_q_rel" ].
+    
+每只_n := n+det-lex &
+  [ STEM < "每只" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_every_q_rel" ].
 
-全部_n := n+det-lex &
-  [ STEM < "全部" >,
+每个_q := common-determiner-lex &
+  [ STEM < "每个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_every_q_rel" ].
+    
+每个_n := n+det-lex &
+  [ STEM < "每个" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
     SYNSEM.LKEYS.ALTKEYREL.PRED "_every_q_rel" ].
 
