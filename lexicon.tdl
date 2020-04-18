@@ -16,6 +16,14 @@
 东西 := common-noun-lex &
   [ STEM < "东西" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+    
+树 := common-noun-lex &
+  [ STEM < "树" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tree_n_rel" ].
+    
+蚂蚁 := common-noun-lex &
+  [ STEM < "蚂蚁" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ant_n_rel" ].
 
 他 := common-noun-lex &
   [ STEM < "他" >,
@@ -32,6 +40,18 @@
 我 := common-noun-lex &
   [ STEM < "我" >,
     SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+    
+你 := common-noun-lex &
+  [ STEM < "你" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+    
+他们 := common-noun-lex &
+  [ STEM < "他们" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
+    
+我们 := common-noun-lex &
+  [ STEM < "我们" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
 
 人 := common-noun-lex &
   [ STEM < "人" >,
@@ -58,6 +78,10 @@
 白 := common_adjective-adj-lex &
   [ STEM < "白" >,
     SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
+    
+大 := common-noun-lex &
+  [ STEM < "大" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_big_a_rel" ].
 
 ;;; Verbs
 
@@ -80,10 +104,22 @@
 伤害 := common_transitive-verb-lex &
   [ STEM < "伤害" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
+    
+欺负 := common_transitive-verb-lex &
+  [ STEM < "欺负" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bully_v_rel" ].
+    
+打扰 := common_transitive-verb-lex &
+  [ STEM < "打扰" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_disturb_v_rel" ].
 
 唱歌 := common_intransitive-verb-lex &
   [ STEM < "唱歌" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sing_v_rel" ].
+    
+睡觉 := common_intransitive-verb-lex &
+  [ STEM < "睡觉" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
     
 知道 := decl_comp-verb-lex &
   [ STEM < "知道" >,
@@ -126,6 +162,10 @@
 大概 := common-aux-lex &
   [ STEM < "大概" >,
     SYNSEM.LKEYS.KEYREL.PRED "_roughly_v_rel" ].
+    
+即将要 := common-aux-lex &
+  [ STEM < "即将要" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_will_v_rel" ].
 
 不 := neg-aux-lex &
   [ STEM < "不" >,
@@ -180,6 +220,15 @@
   [ STEM < "一只" >,
     SYNSEM.LKEYS.KEYREL.PRED "_animal_n_rel",
     SYNSEM.LKEYS.ALTKEYREL.PRED "_a_q_rel" ].
+    
+一个_q := common-determiner-lex &
+  [ STEM < "一个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
+
+一个_n := n+det-lex &
+  [ STEM < "一个" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_a_q_rel" ].
 
 这只_q := common-determiner-lex &
   [ STEM < "这只" >,
@@ -198,6 +247,35 @@
   [ STEM < "那个" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
     SYNSEM.LKEYS.ALTKEYREL.PRED "_that_q_rel" ].
+    
+这些_q := common-determiner-lex &
+  [ STEM < "这些" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_these_q_rel" ].
+    
+这些_n := n+det-lex &
+  [ STEM < "这些" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_these_q_rel" ].
+
+那些_q := common-determiner-lex &
+  [ STEM < "那些" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
+    
+那些_n := n+det-lex &
+  [ STEM < "那些" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_those_q_rel" ].
+
+全部_q := common-determiner-lex &
+  [ STEM < "全部" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_every_q_rel" ].
+
+全部_n := n+det-lex &
+  [ STEM < "全部" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel",
+    SYNSEM.LKEYS.ALTKEYREL.PRED "_every_q_rel" ].
+
+;;; Other particles
 
 吗 := qpart-lex-item &
   [ STEM < "吗" > ].
