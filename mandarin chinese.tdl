@@ -46,6 +46,7 @@ finite := form.
 marker := head.
 perfective := aspect.
 imperfective := aspect.
+no_aspect := aspect.
 
 situation := sort.
 
