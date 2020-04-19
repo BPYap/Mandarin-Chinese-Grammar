@@ -82,6 +82,8 @@ head-spec-phrase := basic-head-spec-phrase & head-final &
 
 common-noun-lex := noun-lex.
 
+pronoun-lex := no-spr-noun-lex.
+
 proper-noun-lex := no-spr-noun-lex.
 
 pronoun-noun-lex := no-spr-noun-lex &
