@@ -79,11 +79,11 @@
   [ STEM < "高兴" >,
     SYNSEM.LKEYS.KEYREL.PRED "_happy_a_rel" ].
 
-白 := common_adjective-adj-lex &
+白 := rel_adjective-adj-lex &
   [ STEM < "白" >,
     SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
     
-大 := common_adjective-adj-lex &
+大 := rel_adjective-adj-lex &
   [ STEM < "大" >,
     SYNSEM.LKEYS.KEYREL.PRED "_big_a_rel" ].
 
