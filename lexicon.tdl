@@ -25,37 +25,41 @@
   [ STEM < "蚂蚁" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ant_n_rel" ].
 
-他 := common-noun-lex &
-  [ STEM < "他" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_he_n_rel" ].
-
-她 := common-noun-lex &
-  [ STEM < "她" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
-    
-它 := common-noun-lex &
-  [ STEM < "它" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
-
-我 := common-noun-lex &
-  [ STEM < "我" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
-    
-你 := common-noun-lex &
-  [ STEM < "你" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
-    
-他们 := common-noun-lex &
-  [ STEM < "他们" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
-    
-我们 := common-noun-lex &
-  [ STEM < "我们" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
-
 人 := common-noun-lex &
   [ STEM < "人" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+我 := pronoun-lex &
+  [ STEM < "我" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+    
+你 := pronoun-lex &
+  [ STEM < "你" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+    
+他 := pronoun-lex &
+  [ STEM < "他" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_he_n_rel" ].
+
+她 := pronoun-lex &
+  [ STEM < "她" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
+    
+它 := pronoun-lex &
+  [ STEM < "它" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
+    
+我们 := pronoun-lex &
+  [ STEM < "我们" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
+    
+你们 := pronoun-lex &
+  [ STEM < "你们" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+    
+他们 := pronoun-lex &
+  [ STEM < "他们" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
 
 小明 := proper-noun-lex &
   [ STEM < "小明" >,
@@ -133,10 +137,6 @@
   [ STEM < "觉得" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-; 问_tr := tr_comp-verb-lex &
-  ; [ STEM < "问" >,
-    ; SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
-    
 给 := ditr-clausal-verb-lex &
   [ STEM < "给" >,
     SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
