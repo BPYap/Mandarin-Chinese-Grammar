@@ -31,11 +31,26 @@ Test sentences:
     20. 那只 猫 欺负 一只 大 蚂蚁
 
     (Singlish)
-    1. He does eat the cat
-    2. The happy cat sings
-    3. I ask if he happy
-    4. The cat and the dog chase me.
-    5. He can eat already
+    1. He does eat the cat.
+    2. Happy dogs are singing.
+    3. I ask if he happy.
+    4. The cat and the tree chase me.
+    5. He can tekan me already.
+    6. I never eat the cat.
+    7. There got a cat and a dog.
+    8. Ants are big and dogs are cute.
+    9. I already got everything.
+    10. Is that cute.
+    11. The tree think he agak can sing.
+    12. The glass does hurt the tree.
+    13. Those ants think that she will sleep.
+    14. A cat kacau the dog.
+    15. Everything is big.
+    16. Every cat gives me a dog.
+    17. I am kacauing the cat.
+    18. I want to give you a tree.
+    19. She ask me if he sleeps.
+    20. is it he give you this.
 """
 
 import sys
@@ -55,16 +70,16 @@ pred_map = {
     "_you_n_rel": "_you_n_1_rel",
     "_they_n_rel": "_they_n_1_rel",
     "_we_n_rel": "_we_n_1_rel",
-    # "_person_n_rel": "",
+    "_person_n_rel": "_person_n_1_rel",
     # "_Xiaoming_n_rel": "",
-    # "_there_n_rel": "",
+    # "_there_n_rel": "_there_n_rel",
     # "_cute_a_rel": "_cute_a_rel",
     # "_happy_a_rel": "_happy_a_rel",
     # "_white_a_rel": "_white_a_rel",
     # "_big_a_rel": "_big_a_rel",
     # "_have_v_rel": "_have_v_rel",
     # "_want_v_rel": "_want_v_rel",
-    # "_know_v_rel": "_know_v_rel",
+    "_know_v_rel": "_know_v_2_rel",
     # "_eat_v_rel": "_eat_v_rel",
     # "_hurt_v_rel": "_hurt_v_rel",
     # "_bully_v_rel": "_bully_v_rel",
@@ -77,11 +92,12 @@ pred_map = {
     # "_ask_v_rel": "_ask_v_rel",
     "_can_v_1_rel": "_can_v_rel",
     "_can_v_2_rel": "_can_v_rel",
-    "_roughly_v_rel": "roughly_rel",
-    "_already_v_rel": "already_rel",
+    "_roughly_v_rel": "_roughly_a_rel",
+    "_already_v_rel": "_already_a_rel",
     # "_will_v_rel": "_will_v_rel",
-    # "neg_rel": "neg_rel",
-    "_not_v_rel": "neg_rel",
+    "neg1_rel": "neg1_rel",
+    "_neg2_rel": "neg2_rel",
+    "_very_rel": "_very_a_rel",
     # "_that_q_rel": "_that_q_rel",
     # "_animal_n_rel": "",
     # "_a_q_rel": "_a_q_rel",

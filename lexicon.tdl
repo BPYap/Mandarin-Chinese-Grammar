@@ -173,11 +173,11 @@
 
 不 := neg-aux-lex &
   [ STEM < "不" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "neg1_rel" ].
 
 没 := neg-aux-lex &
   [ STEM < "没" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_not_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg2_rel" ].
 
 在 := inperfective-aux-lex &
   [ STEM < "在" > ].
@@ -203,7 +203,8 @@
 ;;; Copulas
 
 很 := adjective_pred-cop-lex &
-  [ STEM < "很" > ].
+  [ STEM < "很" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_very_rel" ].
 
 ;;; Determiners
 
