@@ -129,10 +129,6 @@
   [ STEM < "追" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
-给 := transitive_no_obj_drop-verb-lex &
-  [ STEM < "给" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
-
 觉得 := decl_comp-verb-lex &
   [ STEM < "觉得" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
@@ -141,6 +137,10 @@
   ; [ STEM < "问" >,
     ; SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
     
+给 := ditr-clausal-verb-lex &
+  [ STEM < "给" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
 问_ditr := ditr_comp-verb-lex &
   [ STEM < "问" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
