@@ -33,7 +33,7 @@ Test sentences:
     (Singlish)
     1. He does eat the cat.
     2. Happy dogs are singing.
-    3. I ask if he happy.
+    3. White ant want a big dog.
     4. The cat and the tree chase me.
     5. He can tekan me already.
     6. I never eat the cat.
@@ -97,9 +97,8 @@ pred_map = {
     # "_will_v_rel": "_will_v_rel",
     "neg1_rel": "neg1_rel",
     "_neg2_rel": "neg2_rel",
-    "_very_rel": "_very_a_rel",
     # "_that_q_rel": "_that_q_rel",
-    # "_animal_n_rel": "",
+    "_animal_n_rel": "_animal_n_1_rel",
     # "_a_q_rel": "_a_q_rel",
     # "_this_q_rel": "_this_q_rel",
     # "_these_q_rel": "_these_q_rel",
