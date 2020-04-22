@@ -4,6 +4,8 @@
 * [Parse results](#parse)   
 * [Limitations](#limitations)
 * [Suggestions](#suggestions)
+* [Tools](#tools)
+* [Useful commands](#commands)
 
 
 ## Phenomena specified by the LinGO Grammar Matrix customization system <a name="choice"/>
@@ -269,3 +271,88 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 ## Limitations <a name="limitations"/>
 
 ## Suggestions <a name="suggestions"/>
+
+
+## Tools <a name="tools"/>
+* [LinGO Grammar Matrix](http://matrix.ling.washington.edu/customize/matrix.cgi)
+* [ACE](http://sweaglesw.org/linguistics/ace/)
+* [LUI](http://moin.delph-in.net/LkbLui#Obtaining_and_Running_LUI)
+* [PyDelphin](https://github.com/delph-in/pydelphin)
+* [art](http://sweaglesw.org/linguistics/libtsdb/art.html)
+* [FFTB](http://moin.delph-in.net/FftbTop)
+
+## Useful commands <a name="commands"/>
+### Compilation
+```
+ace -G cmn.dat -g ace/config.tdl
+```
+
+### Parsing
+```
+ace -g cmn.dat -l
+```
+
+### Testing
+##### Create test skeleton
+```
+mkdir tsdb/skeletons/testsuite
+cp tsdb/skeletons/Relations tsdb/skeletons/testsuite/relations
+./make_item data/testsuite tsdb/skeletons/testsuite/item
+```
+
+##### Create test profile
+```
+delphin mkprof -s tsdb/skeletons/testsuite/ trees/testsuite/
+```
+
+##### Populate test profile
+```
+delphin process -g cmn.dat trees/testsuite/
+```
+
+##### Fetch true positives
+```
+delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite/
+```
+
+##### Fetch true negatives
+```
+delphin select 'i-id i-input where i-wf = 0 and readings = 0' trees/testsuite/
+```
+
+##### Fetch false positives
+```
+delphin select 'i-id i-input where i-wf = 0 and readings > 0' trees/testsuite/
+```
+
+##### Fetch false negatives
+```
+delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite/
+```
+
+### Treebanking
+##### Create gold profile
+```
+delphin mkprof -s tsdb/skeletons/testsuite/ tsdb/gold
+```
+
+##### Populate gold profile
+```
+art -f -a 'ace --disable-generalization -g cmn.dat -O' tsdb/gold
+```
+
+#### Launch interactive treebanking interface
+```
+fftb -g cmn.dat --browser --webdir ~/bin/acetools-x86-0.9.31/assets/ tsdb/gold
+```
+
+### Generation
+##### Generate in same language
+```
+echo "<sentence>" | ace -g cmn.dat -Tfq | ace -g cmn.dat -e
+```
+
+##### Translate to another language
+```
+echo "<sentence>" | ace -g cmn.dat -Tf1 | python <filter_rules>.py | ace -g <other_language>.dat -e --disable-subsumption-test
+```
