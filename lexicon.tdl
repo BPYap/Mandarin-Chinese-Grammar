@@ -9,9 +9,21 @@
   [ STEM < "猫" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
     
+鸡 := common-noun-lex &
+  [ STEM < "鸡" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chicken_n_rel" ].
+    
 玻璃 := common-noun-lex &
   [ STEM < "玻璃" >,
     SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
+    
+盘子 := common-noun-lex &
+  [ STEM < "盘子" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_plate_n_rel" ].
+    
+酒 := common-noun-lex &
+  [ STEM < "酒" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_alcohol_n_rel" ].
     
 东西 := common-noun-lex &
   [ STEM < "东西" >,
@@ -24,6 +36,10 @@
 蚂蚁 := common-noun-lex &
   [ STEM < "蚂蚁" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ant_n_rel" ].
+    
+兵 := common-noun-lex &
+  [ STEM < "兵" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_soldier_n_rel" ].
 
 人 := common-noun-lex &
   [ STEM < "人" >,
@@ -105,6 +121,10 @@
   [ STEM < "吃" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
     
+喝 := common_transitive-verb-lex &
+  [ STEM < "喝" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
+    
 伤害 := common_transitive-verb-lex &
   [ STEM < "伤害" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
@@ -116,6 +136,10 @@
 打扰 := common_transitive-verb-lex &
   [ STEM < "打扰" >,
     SYNSEM.LKEYS.KEYREL.PRED "_disturb_v_rel" ].
+    
+打坏 := common_transitive-verb-lex &
+  [ STEM < "打坏" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
 唱歌 := common_intransitive-verb-lex &
   [ STEM < "唱歌" >,
@@ -132,6 +156,10 @@
 追 := transitive_no_obj_drop-verb-lex &
   [ STEM < "追" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+    
+当 := transitive_no_obj_drop-verb-lex &
+  [ STEM < "当" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
 觉得 := decl_comp-verb-lex &
   [ STEM < "觉得" >,

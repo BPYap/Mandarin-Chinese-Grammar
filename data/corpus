@@ -1,1 +1,56 @@
-awaiting natural occuring corpus
+Language: Mandarin Chinese
+Language code: cmn
+Lines: orth orth-seg gloss translat
+Author: Yap Boon Peng
+Date: April 22, 2020
+Source a: https://en.wikipedia.org/wiki/Chinese_grammar
+
+#1
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+他 喝 酒
+他 喝 酒
+he drink alcohol
+'He drinks alcohol'
+
+#2
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+我 打坏 了 盘子
+我 打坏 了 盘子
+I break PST plate
+'I broke a plate'
+
+#3
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+我 当 了 兵
+我 当 了 兵
+I become PST soldier
+'I became a soldier'
+
+#4
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+我 当 过 兵
+我 当 过 兵
+I become PRF soldier
+'I once became a soldier'
+
+#5
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {negation}
+我 不 吃 鸡
+我 不 吃 鸡
+I NEG eat chicken
+'I don't eat chicken'
