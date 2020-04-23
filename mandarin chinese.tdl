@@ -237,7 +237,7 @@ arg-comp-aux-no-pred := arg-comp-aux & raise-sem-lex-item &
   [ ARG-ST < [ ],
              [ LOCAL.CAT.HEAD.AUX - ] > ].
 
-inperfective-aux-lex := arg-comp-aux-no-pred &
+imperfective-aux-lex := arg-comp-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT imperfective,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
@@ -459,6 +459,8 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
 
 n+det-lex := noun+det-lex-item.
 
+;;; Aspect marker
+
 basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
   [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,
 					    COMPS #comps,
@@ -477,8 +479,6 @@ basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-bi
 	     ICONS <! !> ] ].
 
 head-marker-phrase := basic-head-marker-phrase & marker-final-phrase & head-initial.
-
-;;; Aspect marker
 
 aspect-marker := raise-sem-lex-item & no-icons-lex-item &
                   norm-zero-arg &

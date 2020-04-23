@@ -207,7 +207,7 @@
   [ STEM < "没" >,
     SYNSEM.LKEYS.KEYREL.PRED "_neg2_rel" ].
 
-在 := inperfective-aux-lex &
+在 := imperfective-aux-lex &
   [ STEM < "在" > ].
 
 ; 了 := perfective-aux-lex &
