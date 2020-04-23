@@ -1,7 +1,9 @@
 ## Table of Contents  
 * [Phenomena specified by the LinGO Grammar Matrix customization system](#choice)  
 * [Phenomena specified by modifying .tdl files](#tdl) 
-* [Parse results](#parse)   
+* [Parse results](#parse)
+* [Trigger rules](#trigger) 
+* [Variable property mapping](#vpm)
 * [Limitations](#limitations)
 * [Suggestions](#suggestions)
 * [Tools](#tools)
@@ -158,8 +160,47 @@ Follow by the lexical entries of "地":
   [ STEM < "地" > ].
 ```
 
-### Perfective Aspect
+### Aspect Marker
+Aspect markers such as "了" and "过" generally follow after a verb (e.g. "他给了她。", "他当过兵。"）. To model this phenomenon, a new rule called `head-marker-phrase` is introduced:
+```
+head-marker-phrase := basic-head-marker-phrase & marker-final-phrase & head-initial.
+```
+A `head-marker-phrase` is a phrase headed by a verb at the initial position followed by an aspect marker. The feature structure of `basic-head-marker-phrase` is given by:
+```
+basic-head-marker-phrase :=  head-valence-phrase & head-compositional & basic-binary-headed-phrase &
+  [ SYNSEM phr-synsem & [ LOCAL.CAT [ VAL [ SUBJ #subj,
+					    COMPS #comps,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ] ],
+    HEAD-DTR.SYNSEM #synsem & [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+						    COMPS #comps,
+						    SPR #spr,
+						    SPEC #spec ],
+					      POSTHEAD #ph ] ] ],
+    NON-HEAD-DTR [ SYNSEM [ LOCAL.CAT [	HEAD marker,
+					VAL.COMPS < #synsem > ] ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+	     ICONS <! !> ] ].
+```
+The marker type and the corresponding lexical rule which form the non-daughter part of `head-marker-phrase` are defined as followed:
+```
+aspect-marker := raise-sem-lex-item & no-icons-lex-item &
+                  norm-zero-arg &
+ [ SYNSEM [ LOCAL [ CAT [ HEAD marker & [ MOD <> ],
+			   VAL [ COMPS < lex-synsem & 
+					 [ LOCAL [ CAT [ HEAD verb & [ AUX - ],
+                                                         VAL.SUBJ < [] > ] ] ] >,
+				 SUBJ < >,
+				 SPEC < >,
+				 SPR < > ],
+			   POSTHEAD + ] ] ] ].
 
+aspect-lex-item := aspect-marker & 
+ [ SYNSEM.LOCAL.CAT.VAL [ COMPS < [ LOCAL [CONT.HOOK.INDEX.E.ASPECT perfective,
+                                           CAT.HEAD verb ] ] > ] ].
+``` 
 
 
 ## Parse results <a name="parse"/>
@@ -267,9 +308,29 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 | 3. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
 
 
+## Trigger rules <a name="trigger"/>
+Trigger rules (defined in `trigger.mtr`) controls the generation of lexical entries with empty semantics. An example of lexical entries with empty semantics is the copula "很" (different than the adverbial "很" which means "very" in English), that is used to link a subject to an adjective (e.g. "猫很可爱。"). A trigger rule is defined for the copula "很" so that its lexical entry is added to the generator chart whenever an adjective predicate is encountered during generation or translation:
+```
+很_gr := generator_rule &
+  [ CONTEXT.RELS <! [ PRED "~_a_" ] !>,
+    FLAGS.TRIGGER "很" ].
+```
+
+
+## Variable property mapping <a name="vpm"/>
+As the aspect markers such as "在", "了" are semantically empty, they would be added to the generator chart according to the trigger rules created by the matrix customization system, i.e. whenever there is a specified/underspecified `ARG0.E.ASPECT` in the minimal recursion semantics (MRS). In the case of underspecified `ARG0.E.ASPECT`, both perfective and imperfective aspect markers will be added and produced many unintended sentences. To constrained this over-generative behavior, the following mappings is added to the `semi.vpm` file to map underspecified aspects to a default aspect type `no_aspect`:
+```
+E.ASPECT : E.ASPECT
+  perfective <> perfective
+  imperfective <> imperfective
+  no_aspect << *
+```
+
+
 ## Limitations <a name="limitations"/>
 
 ## Suggestions <a name="suggestions"/>
+
 
 
 ## Tools <a name="tools"/>
@@ -279,6 +340,7 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 * [PyDelphin](https://github.com/delph-in/pydelphin)
 * [art](http://sweaglesw.org/linguistics/libtsdb/art.html)
 * [FFTB](http://moin.delph-in.net/FftbTop)
+
 
 ## Useful commands <a name="commands"/>
 ### Compilation

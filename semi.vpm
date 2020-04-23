@@ -44,7 +44,9 @@ E.TENSE : E.TENSE
   * <> *
 
 E.ASPECT : E.ASPECT
-  * <> *
+  perfective <> perfective
+  imperfective <> imperfective
+  no_aspect << *
 
 E.MOOD : E.MOOD
   * <> *
