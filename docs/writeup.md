@@ -217,37 +217,38 @@ delphin select 'i-id i-input where i-wf = 1 and readings > 0' trees/testsuite.01
 | 4.  | 他 给 了 她                 | Word order                        |
 | 5.  | 他 给 了 她 一只 猫          | Word order                        |
 | 6.  | 他 要 唱歌                  | Word order                        |
-| 7.  | 我 会                       | Pronouns                          |
-| 8.  | 我 给 了 他 一只 猫           | Pronouns                          |
-| 9.  | 他 给 了 我 一只 猫           | Pronouns                          |
-| 10.  | 他 给 了 那个 人 一只 猫      | Pronouns                           |
-| 11.  | 那里 有 一只 猫             | Case                              |
-| 12.  | 那里 有 猫                  | Case                              |
-| 13.  | 那里 有                     | Case                              |
-| 14.  | 那只 猫 在 唱歌             | Determiners                       |
-| 15. | 猫 在 唱歌                  | Determiners                       |
-| 16. | 小明 在 唱歌                | Determiners, Tense Aspect Mood    |
-| 17. | 他 给 了 我 一只 猫          | Tense Aspect Mood                 |
-| 18. | 他 给 过 我 一只 猫          | Tense Aspect Mood                 |
-| 19. | 他 不 要 唱歌               | Negation                          |
-| 20. | 他 没 有 猫                 | Negation                          |
-| 21. | 他 有 猫                    | Argument optionality              |
-| 22. | 他 有                       | Argument optionality              |
-| 23. | 追 猫                       | Argument optionality              |
-| 24. | 这只 猫                     | Cognitive status                   |
-| 25. | 那只 猫                     | Cognitive status                   |
-| 26. | 一只 猫                     | Cognitive status                   |
-| 27. | 他 会 唱歌 吗               | Matrix yes-no questions           |
-| 28. | 他 不 会 唱歌 吗            | Matrix yes-no questions, negation |
-| 29. | 我 和 他 追 一只 猫         | Coordination                      |
-| 30. | 我 小明 和 他 追 一只 猫    | Coordination                      |
-| 31. | 我 和 小明 和 他 追 一只 猫 | Coordination                      |
-| 32. | 她 高兴 地 唱歌            | Adverbs                           |
-| 33. | 她 觉得 他 不 会 唱歌       | Embedded declaratives             |
-| 34. | 她 问 他 是否 会 唱歌       | Embedded questions                |
-| 35. | 那只 猫 很 可爱             | Non-Verbal Predicates             |
-| 36. | 她 要 一只 白 猫            | Adjectives                        |
-| 37. | 她 大概 知道                | Adverbs                           |
+| 7.  | 他 应该 会 唱歌              | Word order                        |
+| 8.  | 我 会                       | Pronouns                          |
+| 9.  | 我 给 了 他 一只 猫           | Pronouns                          |
+| 10.  | 他 给 了 我 一只 猫           | Pronouns                          |
+| 11.  | 他 给 了 那个 人 一只 猫      | Pronouns                           |
+| 12.  | 那里 有 一只 猫             | Case                              |
+| 13.  | 那里 有 猫                  | Case                              |
+| 14.  | 那里 有                     | Case                              |
+| 15.  | 那只 猫 在 唱歌             | Determiners                       |
+| 16. | 猫 在 唱歌                  | Determiners                       |
+| 17. | 小明 在 唱歌                | Determiners, Tense Aspect Mood    |
+| 18. | 他 给 了 我 一只 猫          | Tense Aspect Mood                 |
+| 19. | 他 给 过 我 一只 猫          | Tense Aspect Mood                 |
+| 20. | 他 不 要 唱歌               | Negation                          |
+| 21. | 他 没 有 猫                 | Negation                          |
+| 22. | 他 有 猫                    | Argument optionality              |
+| 23. | 他 有                       | Argument optionality              |
+| 24. | 追 猫                       | Argument optionality              |
+| 25. | 这只 猫                     | Cognitive status                   |
+| 26. | 那只 猫                     | Cognitive status                   |
+| 27. | 一只 猫                     | Cognitive status                   |
+| 28. | 他 会 唱歌 吗               | Matrix yes-no questions           |
+| 29. | 他 不 会 唱歌 吗            | Matrix yes-no questions, negation |
+| 30. | 我 和 他 追 一只 猫         | Coordination                      |
+| 31. | 我 小明 和 他 追 一只 猫    | Coordination                      |
+| 32. | 我 和 小明 和 他 追 一只 猫 | Coordination                      |
+| 33. | 她 高兴 地 唱歌            | Adverbs                           |
+| 34. | 她 觉得 他 不 会 唱歌       | Embedded declaratives             |
+| 35. | 她 问 他 是否 会 唱歌       | Embedded questions                |
+| 36. | 那只 猫 很 可爱             | Non-Verbal Predicates             |
+| 37. | 她 要 一只 白 猫            | Adjectives                        |
+| 38. | 她 大概 知道                | Adverbs                           |
 
 ### True Negative
 ```
@@ -303,9 +304,8 @@ delphin select 'i-id i-input where i-wf = 1 and readings = 0' trees/testsuite.01
 ```
 | No. | Sentence                 | Phenomena            | Remarks |
 |-----|--------------------------|----------------------|---------|
-| 1.  | 他 应该 会 唱歌          | Word order           | Double auxiliary verbs |
-| 2.  | 追                       | Argument optionality | Fragment |
-| 3. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
+| 1.  | 追                       | Argument optionality | Fragment |
+| 2. | 她 要 一只 可爱 的 猫    | Adjectives           | Relative marker |
 
 
 ## Trigger rules <a name="trigger"/>
@@ -328,9 +328,26 @@ E.ASPECT : E.ASPECT
 
 
 ## Limitations <a name="limitations"/>
+A list of known issues/limitations of the grammar is as follow:
+1. Incorrect parse results for manner adverb "地" (e.g. in the parse tree of the sentence "他高兴地唱歌", "地" is incorrectly attached to the verb "唱歌" instead of the adjective "高兴")
+2. Recursive auxiliaries (e.g. ungrammatical sentence with multiple auxiliary verbs like "她可以可以可以吃。" will produce parse results)
+3. Demonstrative "那里" is hard-coded as a proper noun to parse sentence like "那里有人。"
+4. No distinction between classifiers such as "只" and "个"
+5. No distinction between negative particles such as "没" and "不"
+
 
 ## Suggestions <a name="suggestions"/>
-
+In addition to fixing the limitations listed above, below is a non-exhaustive list of how the grammar can be extended:
+1. Model the phenomenon where an aspect marker can be inserted to the middle of a verb (e.g. "唱了歌", "睡了觉")
+2. Passives (e.g. "他被狗追了。")
+3. Relative marker (e.g. "可爱的猫")
+4. Accusative marker (e.g. "他把盘子打坏了。")
+5. Wh-questions (e.g. "他为什么不吃饭？")
+6. Cleft sentences (e.g "她是昨天买的。")
+7. Correlative conjunctions (e.g. "因为 ... 所以 ...")
+8. Exclamative particles (e.g. "呀，你来了！")
+9. Reduplication (e.g. "舒舒服服")
+10. Idioms (e.g. "津津有味", "豁然开朗")
 
 
 ## Tools <a name="tools"/>
