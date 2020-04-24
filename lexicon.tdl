@@ -198,6 +198,9 @@
 即将要 := common-aux-lex &
   [ STEM < "即将要" >,
     SYNSEM.LKEYS.KEYREL.PRED "_will_v_rel" ].
+    
+应该 := common-aux-lex &
+  [ STEM < "应该" > ].
 
 不 := neg-aux-lex &
   [ STEM < "不" >,
@@ -213,8 +216,8 @@
 ; 了 := perfective-aux-lex &
   ; [ STEM < "了" > ].
 
-应该 := double_aux-aux-lex &
-  [ STEM < "应该" > ].
+; 应该 := double_aux-aux-lex &
+  ; [ STEM < "应该" > ].
 
 ; 过 := experiential-aux-lex &
   ; [ STEM < "过" > ].
