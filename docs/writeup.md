@@ -36,15 +36,15 @@ Verb tenses are not expressed in Mandarin Chinese. Instead several particles are
 Not specified.
 
 ### Other Features
-Although Mandarin Chinese does not distinguish between finite and non-finite verb form, the `Add finite/non-finite FORM feature distinction.` option is still selected as it is a mandatory requirement when presence of auxiliary verbs were specified in the `Word Order` section.
+Although Mandarin Chinese does not distinguish between finite and non-finite verb form, the `Add finite/non-finite FORM feature distinction.` option is still selected as it is a mandatory requirement when auxiliary verbs were specified in the `Word Order` section.
 
 ### Sentential Negation
 Negation construction in Mandarin Chinese is specified as a `simple` morphosyntactic exponence, in which a negative auxiliary verb "不" is introduced.
 
 ### Coordination
 Two coordination strategies for the Mandarin Chinese Grammar are specified:
-* Monosyndeton ("我 你 和 她")
-* Polysyndeton ("我 和 你 和 她")
+* Monosyndeton (e.g. "我 你 和 她")
+* Polysyndeton (e.g. "我 和 你 和 她")
 
 ### Matrix Yes/No Questions
 A question in the Mandarin Chinese Grammar is formed by introducing a sentence final particle "吗".
